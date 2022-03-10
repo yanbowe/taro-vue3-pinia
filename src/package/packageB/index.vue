@@ -1,19 +1,9 @@
 <template>
-  <NumberSubmit />
-  <div class="ellipsis-test ellipsis">测试超行省略</div>
+  <div class="ellipsis-test ellipsis">我是packageB</div>
 </template>
 <script lang="ts" setup>
-import { vibrateShort, stopPullDownRefresh, useDidShow, usePullDownRefresh } from '@tarojs/taro';
-import { NumberSubmit } from '@/components';
-
-useDidShow(() => {});
-usePullDownRefresh(() => {
-  vibrateShort();
-  stopPullDownRefresh();
-});
-
 definePageConfig({
-  navigationBarTitleText: 'featureA',
+  navigationBarTitleText: 'packageA',
   enablePullDownRefresh: true,
   backgroundTextStyle: 'dark'
 });

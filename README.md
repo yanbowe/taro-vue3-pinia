@@ -151,7 +151,7 @@ export default {
   },
   subpackages: [
     {
-      root: 'pages/featureA',
+      root: 'pages/packageA',
       pages: ['index/index']
     }
   ]
