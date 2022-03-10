@@ -10,8 +10,8 @@ taro-vue3-pinia 是一个使用 Taro3 + Vue3 + TypeScript + NutUi + pinia + wind
 - **代码规范**：丰富的规范插件及极高的代码规范
 
 ## 代码仓库
+- [github](https://github.com/yanbowe/taro-vue3-pinia)
 - [gitee](https://gitee.com/zhongjiancrm/taro-vue3-pinia)
-- [github](https://github.com/Yill625/taro3-vue3-template)
 
 ## Vscode 插件安装
 
