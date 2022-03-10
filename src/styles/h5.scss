@@ -1,0 +1,25 @@
+.h5 {
+	&-span {
+		display: inline;
+
+	}
+
+	&-img {
+		border: none;
+
+	}
+
+	&-button {
+		display: inline-block;
+	}
+
+	&-input {
+		display: inline-block;
+
+		&::after {
+			border: none;
+
+		}
+	}
+
+}
