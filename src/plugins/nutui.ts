@@ -1,4 +1,4 @@
-import { App } from 'vue';
+import type { App } from 'vue';
 import { Button, Dialog, Cell, Icon } from '@nutui/nutui-taro';
 
 /** 定制化主题必须使用 scss */

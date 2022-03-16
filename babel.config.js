@@ -6,9 +6,9 @@ module.exports = {
       'taro',
       {
         framework: 'vue3',
-        ts: true
-      }
-    ]
+        ts: true,
+      },
+    ],
   ],
   plugins: [
     [
@@ -16,18 +16,18 @@ module.exports = {
       {
         libraryName: '@nutui/nutui',
         libraryDirectory: 'dist/packages/_es',
-        camel2DashComponentName: false
+        camel2DashComponentName: false,
       },
-      'nutui3-vue'
+      'nutui3-vue',
     ],
     [
       'import',
       {
         libraryName: '@nutui/nutui-taro',
         libraryDirectory: 'dist/packages/_es',
-        camel2DashComponentName: false
+        camel2DashComponentName: false,
       },
-      'nutui3-taro'
-    ]
-  ]
+      'nutui3-taro',
+    ],
+  ],
 };

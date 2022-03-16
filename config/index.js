@@ -11,10 +11,10 @@ const config = {
     640: 2.34 / 2,
     750: 1,
     828: 1.81 / 2,
-    375: 2 / 1
+    375: 2 / 1,
   },
   alias: {
-    '@': path.resolve(__dirname, '..', 'src')
+    '@': path.resolve(__dirname, '..', 'src'),
   },
   sourceRoot: 'src',
   outputRoot: 'dist',
@@ -22,26 +22,26 @@ const config = {
     ? ['@tarojs/plugin-html', '@tarojs/plugin-vue-devtools', 'taro-plugin-pinia', 'taro-plugin-tailwind']
     : ['@tarojs/plugin-html', 'taro-plugin-pinia', 'taro-plugin-tailwind'],
   sass: {
-    resource: [path.resolve(__dirname, '..', 'src/styles/custom.scss')]
+    resource: [path.resolve(__dirname, '..', 'src/styles/custom.scss')],
   },
   defineConstants: {},
   copy: {
     patterns: [],
-    options: {}
+    options: {},
   },
   framework: 'vue3',
   mini: {
     postcss: {
       pxtransform: {
         enable: true,
-        config: {}
+        config: {},
       },
       url: {
         enable: true,
         config: {
           /** 设定转换尺寸上限 */
-          limit: 1024
-        }
+          limit: 1024,
+        },
       },
       cssModules: {
         /** 默认为 false，如需使用 css modules 功能，则设为 true  */
@@ -49,10 +49,10 @@ const config = {
         config: {
           /** 转换模式，取值为 global/module */
           namingPattern: 'module',
-          generateScopedName: '[name]__[local]___[hash:base64:5]'
-        }
-      }
-    }
+          generateScopedName: '[name]__[local]___[hash:base64:5]',
+        },
+      },
+    },
   },
   h5: {
     publicPath: '/',
@@ -60,7 +60,7 @@ const config = {
     postcss: {
       autoprefixer: {
         enable: true,
-        config: {}
+        config: {},
       },
       cssModules: {
         /** 默认为 false，如需使用 css modules 功能，则设为 true */
@@ -68,9 +68,9 @@ const config = {
         config: {
           /** 转换模式，取值为 global/module */
           namingPattern: 'module',
-          generateScopedName: '[name]__[local]___[hash:base64:5]'
-        }
-      }
+          generateScopedName: '[name]__[local]___[hash:base64:5]',
+        },
+      },
     },
     devServer: {
       proxy: {
@@ -78,15 +78,15 @@ const config = {
           target: process.env.HTTP_URL,
           changeOrigin: true,
           pathRewrite: {
-            '^/api': ''
-          }
-        }
-      }
-    }
-  }
+            '^/api': '',
+          },
+        },
+      },
+    },
+  },
 };
 
-module.exports = merge => {
+module.exports = (merge) => {
   if (process.env.NODE_ENV === 'development') {
     return merge({}, config, require('./dev'));
   }

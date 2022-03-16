@@ -2,7 +2,7 @@
   <nut-cell title="基础弹框" @tap="baseClick"></nut-cell>
   <nut-cell title="分包A" @tap="handleToA"></nut-cell>
   <nut-cell title="分包B" @tap="handleToB"></nut-cell>
-  <nut-dialog v-model:visible="visible1" title="基础弹框" content="这是基础弹框。" @cancel="onCancel" @ok="onOk" />
+  <nut-dialog v-model:visible="visible1" title="基础弹框" content="这是基础弹框。" />
 </template>
 
 <script lang="ts" setup>
@@ -14,24 +14,20 @@ function baseClick() {
   visible1.value = true;
 }
 
-function onCancel() {}
-
-function onOk() {}
-
 function handleToA() {
   navigateTo({
-    url: '/package/packageA/index'
+    url: '/package/packageA/index',
   });
 }
 
 function handleToB() {
   navigateTo({
-    url: '/package/packageB/index'
+    url: '/package/packageB/index',
   });
 }
 
 /** 设置页面属性 */
 definePageConfig({
-  navigationBarTitleText: '首页'
+  navigationBarTitleText: '首页',
 });
 </script>

@@ -10,6 +10,6 @@ export default function useSmsCode() {
   return {
     label,
     start,
-    isCounting
+    isCounting,
   };
 }

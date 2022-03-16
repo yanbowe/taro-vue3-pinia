@@ -12,7 +12,7 @@ module.exports = {
     divideWidth: false,
     space: false,
     placeholderColor: false,
-    placeholderOpacity: false
+    placeholderOpacity: false,
   },
   shortcuts: {
     'wh-full': 'w-full h-full',
@@ -50,24 +50,24 @@ module.exports = {
     'nowrap-hidden': 'whitespace-nowrap overflow-hidden',
     'ellipsis-text': 'nowrap-hidden overflow-ellipsis',
     'transition-base': 'transition-all duration-300 ease-in-out',
-    'init-loading-spin': 'w-16px h-16px bg-primary rounded-8px animate-pulse'
+    'init-loading-spin': 'w-16px h-16px bg-primary rounded-8px animate-pulse',
   },
   theme: {
     extend: {
       colors: {
         primary: '#1890ff',
         light: '#ffffff',
-        dark: '#18181c'
+        dark: '#18181c',
       },
       backgroundColor: {
         dark: '#18181c',
-        'dark-base': '#101014'
+        'dark-base': '#101014',
       },
       textColor: {
         'black-base': '#333639',
-        'white-base': 'rgba(255, 255, 255, 0.82)'
+        'white-base': 'rgba(255, 255, 255, 0.82)',
       },
-      transitionProperty: ['padding-left']
-    }
-  }
+      transitionProperty: ['padding-left'],
+    },
+  },
 };

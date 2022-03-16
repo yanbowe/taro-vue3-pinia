@@ -1,11 +1,11 @@
 <template>
-  <div class="ellipsis-test ellipsis">我是packageB</div>
+  <div>我是packageB</div>
 </template>
 <script lang="ts" setup>
 definePageConfig({
-  navigationBarTitleText: 'packageA',
+  navigationBarTitleText: 'packageB',
   enablePullDownRefresh: true,
-  backgroundTextStyle: 'dark'
+  backgroundTextStyle: 'dark',
 });
 </script>
 

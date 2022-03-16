@@ -18,7 +18,7 @@ export default function useUserContext() {
 
   const context: UserContext = {
     name,
-    handleChangeName
+    handleChangeName,
   };
 
   function useUserProvide() {
@@ -27,6 +27,6 @@ export default function useUserContext() {
 
   return {
     useUserProvide,
-    useUserInject
+    useUserInject,
   };
 }

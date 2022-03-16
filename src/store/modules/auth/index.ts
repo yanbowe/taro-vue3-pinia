@@ -20,21 +20,21 @@ const authStore = defineStore({
       userInfo: {
         userId: '',
         userName: 'Soybean',
-        userPhone: ''
-      }
+        userPhone: '',
+      },
     };
   },
   getters: {
     /** 是否登录 */
-    isLogin: state => Boolean(state.token)
+    isLogin: (state) => Boolean(state.token),
   },
   actions: {
     /** 重置auth状态 */
     resetAuthState() {
       removeToken();
       this.$reset();
-    }
-  }
+    },
+  },
 });
 
 export default function useAuthStore() {

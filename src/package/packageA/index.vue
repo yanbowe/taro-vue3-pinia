@@ -1,9 +1,9 @@
 <template>
-  <div class="ellipsis-test ellipsis">我是packageA</div>
+  <div>我是packageA</div>
 </template>
 <script lang="ts" setup>
 definePageConfig({
-  navigationBarTitleText: 'packageA'
+  navigationBarTitleText: 'packageA',
 });
 </script>
 

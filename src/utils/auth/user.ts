@@ -31,7 +31,9 @@ export function removeRefreshToken() {
   removeLocal(EnumStorageKey['refresh-koken']);
 }
 
-export function getUserInfo() {}
+export function getUserInfo() {
+  //
+}
 
 /** 去除用户相关缓存 */
 export function resetAuthStorage() {
