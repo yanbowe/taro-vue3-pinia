@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia';
 import { store } from '@/store';
 import { getToken, removeToken } from '@/utils';
-import { UserInfo } from '@/interface';
+import type { UserInfo } from '@/interface';
 
 interface AuthState {
   /** 用户token */
