@@ -75,8 +75,8 @@ module.exports = {
         'padding-left',
         'border-color',
         'right',
-        'fill'
-      ]
+        'fill',
+      ],
     },
   },
 };

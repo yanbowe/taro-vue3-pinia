@@ -225,4 +225,3 @@ page {
 - VirtualList 组件需要实现一份 Vue3 版本（待实现）
 - 所有组件的 id 必须在整个应用中保持唯一（即使他们在不同的页面），否则可能导致事件不触发的问题
 - windi.css 限制 不支持text-[#000]写法(可通过text-hex-808080解决)，详情请看- [github](https://github.com/Yill625/taro3-vue3-template)。
-- windi.css shortcuts自定义class无效。
