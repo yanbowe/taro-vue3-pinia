@@ -23,6 +23,7 @@ const config = {
     : ['@tarojs/plugin-html', 'taro-plugin-pinia', 'taro-plugin-tailwind'],
   sass: {
     resource: [path.resolve(__dirname, '..', 'src/styles/custom.scss')],
+    data: `@import "@nutui/nutui-taro/dist/styles/variables.scss";`,
   },
   defineConstants: {},
   copy: {
@@ -34,7 +35,13 @@ const config = {
     postcss: {
       pxtransform: {
         enable: true,
-        config: {},
+        config: {
+          /** 如果设计稿为750时 */
+          // designWidth(input) {
+          //   const isNutUi = input.file.replace(/\\+/g, '/').indexOf('@nutui/nutui-taro') > -1;
+          //   return isNutUi ? 375 : 750;
+          // },
+        },
       },
       url: {
         enable: true,
@@ -58,6 +65,16 @@ const config = {
     publicPath: '/',
     staticDirectory: 'static',
     postcss: {
+      pxtransform: {
+        enable: true,
+        config: {
+          /** 如果设计稿为750时 */
+          // designWidth(input) {
+          //   const isNutUi = input.file.replace(/\\+/g, '/').indexOf('@nutui/nutui-taro') > -1;
+          //   return isNutUi ? 375 : 750;
+          // },
+        },
+      },
       autoprefixer: {
         enable: true,
         config: {},
