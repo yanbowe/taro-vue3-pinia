@@ -192,7 +192,9 @@ export * from './modules'
 "devtools:weapp": "npm run build:weapp -- --watch --devtools"
 ```
 
-## 样式封装
+## 主题定制
+
+- 使用windicss完善主题定制，只在h5有效，小程序无法对page动态设置style，暂无解决方案
 
 ### 公共样式
 

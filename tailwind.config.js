@@ -56,16 +56,19 @@ module.exports = {
     extend: {
       colors: {
         primary: '#1890ff',
+        green: 'var(--green-color)',
+        orange: 'var(--orange-color)',
+        red: 'var(--red-color)',
         light: '#ffffff',
-        dark: '#18181c',
+        dark: '#000',
       },
       backgroundColor: {
-        dark: '#18181c',
+        dark: '#000',
         'dark-base': '#101014',
       },
       textColor: {
         'black-base': '#333639',
-        'white-base': 'rgba(255, 255, 255, 0.82)',
+        'white-base': '#fff',
       },
       transitionProperty: [
         'width',

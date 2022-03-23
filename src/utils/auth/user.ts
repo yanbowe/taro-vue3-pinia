@@ -31,12 +31,31 @@ export function removeRefreshToken() {
   removeLocal(EnumStorageKey['refresh-koken']);
 }
 
+/** 设置用户信息 */
 export function getUserInfo() {
-  //
+  const emptyInfo: Auth.UserInfo = {
+    userId: '',
+    userName: '',
+    userPhone: '',
+    userRole: 'visitor',
+  };
+  const userInfo: Auth.UserInfo = getLocal<Auth.UserInfo>(EnumStorageKey['user-info']) || emptyInfo;
+  return userInfo;
+}
+
+/** 获取用户信息 */
+export function setUserInfo(userInfo: Auth.UserInfo) {
+  setLocal(EnumStorageKey['user-info'], userInfo);
+}
+
+/** 去除用户信息 */
+export function removeUserInfo() {
+  removeLocal(EnumStorageKey['user-info']);
 }
 
 /** 去除用户相关缓存 */
-export function resetAuthStorage() {
+export function clearAuthStorage() {
   removeToken();
   removeRefreshToken();
+  removeUserInfo();
 }

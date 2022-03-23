@@ -1,3 +1,2 @@
-import useAuthStore from './auth';
-
-export { useAuthStore };
+export * from './auth';
+export * from './theme';

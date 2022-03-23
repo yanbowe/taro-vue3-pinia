@@ -1,42 +1,27 @@
 import { defineStore } from 'pinia';
-import { store } from '@/store';
-import { getToken, removeToken } from '@/utils';
-import type { UserInfo } from '@/interface';
+import { getUserInfo, getToken, clearAuthStorage } from '@/utils';
 
 interface AuthState {
+  /** 用户信息 */
+  userInfo: Auth.UserInfo;
   /** 用户token */
   token: string;
-  /** 用户信息 */
-  userInfo: UserInfo;
 }
 
-const authStore = defineStore({
-  /** 区分不通状态的唯一标识 */
-  id: 'auth-store',
-  /** 状态 */
-  state: (): AuthState => {
-    return {
-      token: getToken(),
-      userInfo: {
-        userId: '',
-        userName: 'Soybean',
-        userPhone: '',
-      },
-    };
-  },
+export const useAuthStore = defineStore('auth-store', {
+  state: (): AuthState => ({
+    userInfo: getUserInfo(),
+    token: getToken(),
+  }),
   getters: {
     /** 是否登录 */
     isLogin: (state) => Boolean(state.token),
   },
   actions: {
     /** 重置auth状态 */
-    resetAuthState() {
-      removeToken();
+    resetAuthStore() {
+      clearAuthStorage();
       this.$reset();
     },
   },
 });
-
-export default function useAuthStore() {
-  return authStore(store);
-}

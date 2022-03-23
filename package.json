@@ -43,6 +43,8 @@
     "@tarojs/plugin-html": "^3.4.3",
     "@tarojs/runtime": "^3.4.3",
     "@tarojs/taro": "^3.4.3",
+    "@vueuse/core": "^8.1.2",
+    "lodash-es": "^4.17.21",
     "pinia": "^2.0.12",
     "qs": "^6.10.3",
     "vue": "^3.2.31"
@@ -54,6 +56,7 @@
     "@tarojs/mini-runner": "^3.4.3",
     "@tarojs/plugin-vue-devtools": "^3.4.3",
     "@tarojs/webpack-runner": "^3.4.3",
+    "@types/lodash-es": "^4.17.6",
     "@types/qs": "^6.9.7",
     "@types/webpack-env": "^1.16.3",
     "@typescript-eslint/eslint-plugin": "^5.16.0",

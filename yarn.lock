@@ -2850,6 +2850,13 @@
   resolved "https://registry.nlark.com/@types/json5/download/@types/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
 
+"@types/lodash-es@^4.17.6":
+  version "4.17.6"
+  resolved "https://registry.npmjs.org/@types/lodash-es/-/lodash-es-4.17.6.tgz#c2ed4c8320ffa6f11b43eb89e9eaeec65966a0a0"
+  integrity sha512-R+zTeVUKDdfoRxpAryaQNRKk3105Rrgx2CFRClIgRGaqDTdjsm8h6IYA8ir584W3ePzkZfst5xIgDwYrlh9HLg==
+  dependencies:
+    "@types/lodash" "*"
+
 "@types/lodash.debounce@^4.0.6":
   version "4.0.6"
   resolved "https://registry.npmmirror.com/@types/lodash.debounce/download/@types/lodash.debounce-4.0.6.tgz#c5a2326cd3efc46566c47e4c0aa248dc0ee57d60"
@@ -3486,6 +3493,27 @@
   version "0.1.3"
   resolved "https://registry.npmjs.org/@vue/tsconfig/-/tsconfig-0.1.3.tgz#4a61dbd29783d01ddab504276dcf0c2b6988654f"
   integrity sha512-kQVsh8yyWPvHpb8gIc9l/HIDiiVUy1amynLNpCy8p+FoCiZXCo6fQos5/097MmnNZc9AtseDsCrfkhqCrJ8Olg==
+
+"@vueuse/core@^8.1.2":
+  version "8.1.2"
+  resolved "https://registry.npmjs.org/@vueuse/core/-/core-8.1.2.tgz#3153d4766b07a648bfbdd01559e8d3b20fda6eb5"
+  integrity sha512-prI2GzigBUtJNTcwRjJPzUPLFoRZM1RZFR464DFdwgU8TxRFf7dRvuvWFDNbCATzLExHFnGI3zTp9GkXTTZxgQ==
+  dependencies:
+    "@vueuse/metadata" "8.1.2"
+    "@vueuse/shared" "8.1.2"
+    vue-demi "*"
+
+"@vueuse/metadata@8.1.2":
+  version "8.1.2"
+  resolved "https://registry.npmjs.org/@vueuse/metadata/-/metadata-8.1.2.tgz#4e0707de7575ff265484c122f2b85f40f11c43c7"
+  integrity sha512-LrPtdiYMleygnGmz8mEmYI9h4Eyo+/igxZWNrwuPnqvL9pIO+8eUpBgPLH5GowKv3Nu0LPZSXSIuaWVJBSU1Cg==
+
+"@vueuse/shared@8.1.2":
+  version "8.1.2"
+  resolved "https://registry.npmjs.org/@vueuse/shared/-/shared-8.1.2.tgz#68564aa81aca334f6252098f02e4e0a9715c0585"
+  integrity sha512-4Hb9iPUhAz7ghO4hgvB2GV2FOy12qQGdhmQ+9HC6QN/J66DELhmxAvkZAtK5FBqZOSwzKszPqNqoyhRKQrrWGQ==
+  dependencies:
+    vue-demi "*"
 
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
@@ -10477,6 +10505,11 @@ lodash-es@4.17.15:
   version "4.17.15"
   resolved "https://registry.npm.taobao.org/lodash-es/download/lodash-es-4.17.15.tgz?cache=0&sync_timestamp=1613836185353&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flodash-es%2Fdownload%2Flodash-es-4.17.15.tgz#21bd96839354412f23d7a10340e5eac6ee455d78"
   integrity sha1-Ib2Wg5NUQS8j16EDQOXqxu5FXXg=
+
+lodash-es@^4.17.21:
+  version "4.17.21"
+  resolved "https://registry.npmjs.org/lodash-es/-/lodash-es-4.17.21.tgz#43e626c46e6591b7750beb2b50117390c609e3ee"
+  integrity sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==
 
 lodash.clonedeep@^4.5.0:
   version "4.5.0"
