@@ -3,7 +3,12 @@ import { ContentTypeEnum } from '@/enum';
 import { getToken, removeToken } from '@/utils';
 import type { Method, Config } from '@/interface';
 
-const axios = (url: string, method: Method, extend: Config, data = {}) => {
+async function axios<T = any>(
+  url: string,
+  method: Method,
+  extend: Config,
+  data = {}
+): Promise<Service.RequestResult<T>> {
   const baseUrl = url.substring(0, 1) === '/' ? `${process.env.HTTP_URL}${url}` : `${url}`;
   const header: any = {};
 
@@ -16,7 +21,7 @@ const axios = (url: string, method: Method, extend: Config, data = {}) => {
     /** 添加token */
     header.Authorization = token;
   }
-  return new Promise((resolve, reject) => {
+  return await new Promise((resolve, reject) => {
     request({
       /** 兼容Url不同的情况，可以通过填写完整路径 */
       url: baseUrl,
@@ -25,7 +30,7 @@ const axios = (url: string, method: Method, extend: Config, data = {}) => {
       data: { _t: Date.now(), ...data },
       header,
       success: (res) => {
-        const { code, message, result } = res.data;
+        const { code, message, result } = res.data as Service.BackendResultConfig<T>;
         /* 成功请求 */
         if (code === 200) {
           return resolve({
@@ -56,7 +61,7 @@ const axios = (url: string, method: Method, extend: Config, data = {}) => {
             message,
             errorCode: code,
           },
-          success: {},
+          success: null,
         });
       },
       fail: (err) => {
@@ -66,9 +71,7 @@ const axios = (url: string, method: Method, extend: Config, data = {}) => {
         //
       },
     });
-  }).catch(() => {
-    //
   });
-};
+}
 
 export default axios;

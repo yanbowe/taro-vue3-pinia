@@ -88,7 +88,7 @@ module.exports = {
             position: 'before',
           },
           {
-            pattern: '@/api',
+            pattern: '@/service',
             group: 'internal',
             position: 'before',
           },
