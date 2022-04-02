@@ -17,18 +17,18 @@ function baseClick() {
 
 function handleToA() {
   navigateTo({
-    url: '/package/packageA/index',
+    url: '/package/packageA/index'
   });
 }
 
 function handleToB() {
   navigateTo({
-    url: '/package/packageB/index',
+    url: '/package/packageB/index'
   });
 }
 
 /** 设置页面属性 */
 definePageConfig({
-  navigationBarTitleText: '首页',
+  navigationBarTitleText: '首页'
 });
 </script>

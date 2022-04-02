@@ -1,7 +1,7 @@
 module.exports = {
   env: {
     NODE_ENV: '"production"',
-    HTTP_URL: '"https://getman.cn/mock"',
+    HTTP_URL: '"https://getman.cn/mock"'
   },
   defineConstants: {},
   mini: {},
@@ -14,5 +14,5 @@ module.exports = {
      *     .use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin, [])
      * }
      */
-  },
+  }
 };

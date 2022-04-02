@@ -25,8 +25,8 @@ export const useThemeStore = defineStore('theme-store', {
     otherColor: {
       green: '#07c160',
       orange: '#ff976a',
-      red: '#ee0a24',
-    },
+      red: '#ee0a24'
+    }
   }),
   actions: {
     /** 设置系统主题颜色 */
@@ -38,8 +38,8 @@ export const useThemeStore = defineStore('theme-store', {
     setOtherColor(color: string, type: ColorType = 'green') {
       this.otherColor[type] = color;
       subscribeTheme();
-    },
-  },
+    }
+  }
 });
 
 export { subscribeTheme };

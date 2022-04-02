@@ -11,17 +11,17 @@ interface AuthState {
 export const useAuthStore = defineStore('auth-store', {
   state: (): AuthState => ({
     userInfo: getUserInfo(),
-    token: getToken(),
+    token: getToken()
   }),
   getters: {
     /** 是否登录 */
-    isLogin: (state) => Boolean(state.token),
+    isLogin: state => Boolean(state.token)
   },
   actions: {
     /** 重置auth状态 */
     resetAuthStore() {
       clearAuthStorage();
       this.$reset();
-    },
-  },
+    }
+  }
 });

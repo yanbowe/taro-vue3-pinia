@@ -12,7 +12,7 @@ module.exports = {
     divideWidth: false,
     space: false,
     placeholderColor: false,
-    placeholderOpacity: false,
+    placeholderOpacity: false
   },
   shortcuts: {
     'wh-full': 'w-full h-full',
@@ -50,7 +50,7 @@ module.exports = {
     'nowrap-hidden': 'whitespace-nowrap overflow-hidden',
     'ellipsis-text': 'nowrap-hidden overflow-ellipsis',
     'transition-base': 'transition-all duration-300 ease-in-out',
-    'init-loading-spin': 'w-16px h-16px bg-primary rounded-8px animate-pulse',
+    'init-loading-spin': 'w-16px h-16px bg-primary rounded-8px animate-pulse'
   },
   theme: {
     extend: {
@@ -60,15 +60,15 @@ module.exports = {
         orange: 'var(--orange-color)',
         red: 'var(--red-color)',
         light: '#ffffff',
-        dark: '#000',
+        dark: '#000'
       },
       backgroundColor: {
         dark: '#000',
-        'dark-base': '#101014',
+        'dark-base': '#101014'
       },
       textColor: {
         'black-base': '#333639',
-        'white-base': '#fff',
+        'white-base': '#fff'
       },
       transitionProperty: [
         'width',
@@ -78,8 +78,8 @@ module.exports = {
         'padding-left',
         'border-color',
         'right',
-        'fill',
-      ],
-    },
-  },
+        'fill'
+      ]
+    }
+  }
 };

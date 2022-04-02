@@ -6,7 +6,7 @@ import axios from './axios';
 async function get<T = any>(url: string, params = {}, config: Config = {}) {
   const extend: Config = {
     useErrMsg: false,
-    ...config,
+    ...config
   };
 
   return await axios<T>(url, RequestEnum.GET, extend, params);
@@ -16,7 +16,7 @@ async function post<T = any>(url: string, data = {}, config: Config = {}) {
   const extend: Config = {
     useErrMsg: false,
     contentType: ContentTypeEnum.JSON,
-    ...config,
+    ...config
   };
   return await axios<T>(url, RequestEnum.POST, extend, data);
 }

@@ -5,7 +5,7 @@ const DEFAULT_CACHE_TIME = 60 * 60 * 24 * 7;
 export function setLocal(key: string, value: unknown, expire: number | null = DEFAULT_CACHE_TIME) {
   const json = JSON.stringify({
     value,
-    expire: expire !== null ? new Date().getTime() + expire * 1000 : null,
+    expire: expire !== null ? new Date().getTime() + expire * 1000 : null
   });
   setStorageSync(key, json);
 }

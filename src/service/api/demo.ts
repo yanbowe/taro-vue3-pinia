@@ -5,6 +5,6 @@ import { post } from '../request';
 export async function fetchDemo(data: any) {
   return await post<{ hello: string }>('/route/to/demo', data, {
     useErrMsg: true,
-    contentType: ContentTypeEnum.FORM_URLENCODED,
+    contentType: ContentTypeEnum.FORM_URLENCODED
   });
 }

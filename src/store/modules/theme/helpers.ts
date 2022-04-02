@@ -9,7 +9,7 @@ type ThemeVarsKeys = keyof ThemeVars;
 export function addThemeCssVarsToHtml(themeVars: ThemeVars) {
   const keys = Object.keys(themeVars) as ThemeVarsKeys[];
   const style: string[] = [];
-  keys.forEach((key) => {
+  keys.forEach(key => {
     style.push(`--${kebabCase(key)}-color: ${themeVars[key]}`);
   });
   const styleStr = style.join(';');

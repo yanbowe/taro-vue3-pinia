@@ -3,7 +3,7 @@
 </template>
 <script lang="ts" setup>
 definePageConfig({
-  navigationBarTitleText: 'packageA',
+  navigationBarTitleText: 'packageA'
 });
 </script>
 

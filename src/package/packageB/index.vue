@@ -5,7 +5,7 @@
 definePageConfig({
   navigationBarTitleText: 'packageB',
   enablePullDownRefresh: true,
-  backgroundTextStyle: 'dark',
+  backgroundTextStyle: 'dark'
 });
 </script>
 

@@ -5,12 +5,12 @@ export default defineAppConfig({
     backgroundTextStyle: 'light',
     navigationBarBackgroundColor: '#fff',
     navigationBarTitleText: 'Taro3',
-    navigationBarTextStyle: 'black',
+    navigationBarTextStyle: 'black'
   },
   subPackages: [
     {
       root: 'package',
-      pages: ['packageA/index', 'packageB/index'],
-    },
-  ],
+      pages: ['packageA/index', 'packageB/index']
+    }
+  ]
 });

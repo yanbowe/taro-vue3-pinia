@@ -29,13 +29,13 @@ async function axios<T = any>(
       /** 对所有请求添加时间戳以防止缓存 */
       data: { _t: Date.now(), ...data },
       header,
-      success: (res) => {
+      success: res => {
         const { code, message, result } = res.data as Service.BackendResultConfig<T>;
         /* 成功请求 */
         if (code === 200) {
           return resolve({
             error: null,
-            success: result,
+            success: result
           });
         }
         switch (code) {
@@ -52,24 +52,24 @@ async function axios<T = any>(
               showToast({
                 title: message,
                 icon: 'none',
-                duration: 2000,
+                duration: 2000
               });
             }
         }
         return resolve({
           error: {
             message,
-            errorCode: code,
+            errorCode: code
           },
-          success: null,
+          success: null
         });
       },
-      fail: (err) => {
+      fail: err => {
         reject(err);
       },
       complete: () => {
         //
-      },
+      }
     });
   });
 }
