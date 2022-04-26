@@ -65,7 +65,7 @@ yarn dev:weapp
 
 ## 注意事项
 
-- **提交commit 无法执行husky自动修复代码** 执行yarn prepare命令   mac下额外执行 chmod +x .husky/pre-commit chmod 700 .husky/* 命令
+- **提交commit 无法执行husky自动修复代码** 执行yarn prepare命令 mac下额外执行pnpm postinstall
 
 ### 1.安装依赖
 

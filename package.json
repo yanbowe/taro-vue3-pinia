@@ -25,6 +25,7 @@
     "typecheck": "vue-tsc --noEmit",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
     "prepare": "husky install",
+		"postinstall": "git config core.hooksPath .husky && chmod 700 .husky/*",
     "updates": "yarn upgrade-interactive --latest"
   },
   "lint-staged": {
