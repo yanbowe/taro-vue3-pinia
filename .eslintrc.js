@@ -168,6 +168,12 @@ module.exports = {
       rules: {
         'vue/comment-directive': 'off'
       }
+    },
+    {
+      files: ['*.json'],
+      rules: {
+        'no-unused-expressions': 'off'
+      }
     }
   ]
 };

@@ -92,7 +92,7 @@ const config = {
     devServer: {
       proxy: {
         '/api': {
-          target: process.env.HTTP_URL,
+          target: 'https://getman.cn/mock',
           changeOrigin: true,
           pathRewrite: {
             '^/api': ''

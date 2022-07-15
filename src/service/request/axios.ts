@@ -1,7 +1,9 @@
-import { request, showToast } from '@tarojs/taro';
+import { request, showToast, getEnv } from '@tarojs/taro';
 import { ContentTypeEnum } from '@/enum';
 import { getToken, removeToken } from '@/utils';
 import type { Method, Config } from '@/interface';
+
+const env = getEnv();
 
 async function axios<T = any>(
   url: string,
@@ -9,7 +11,12 @@ async function axios<T = any>(
   extend: Config,
   data = {}
 ): Promise<Service.RequestResult<T>> {
-  const baseUrl = url.substring(0, 1) === '/' ? `${process.env.HTTP_URL}${url}` : `${url}`;
+  let baseUrl: string;
+  if (env === 'WEB') {
+    baseUrl = `/api${url}`;
+  } else {
+    baseUrl = url.substring(0, 1) === '/' ? `${process.env.HTTP_URL}${url}` : `${url}`;
+  }
   const header: any = {};
 
   /** 增加类型 */

@@ -1,22 +1,14 @@
 {
-	"extends": "@vue/tsconfig/tsconfig.web.json",
-	"include": [
-		"src/typings/*.d.ts",
-		"src/typings/**/*.d.ts",
-		"src/**/*",
-		"src/**/*.vue",
-	],
-	"exclude": [
-		"/dist/**",
-		 "node_modules"
-	],
-	"compilerOptions": {
-		"baseUrl": ".",
-		"allowJs": true,
-		"paths": {
-			"@/*": ["./src/*"],
-			"~/*": ["./*"]
-		},
-		"types": ["node"]
-	}
+  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "include": ["src/typings/*.d.ts", "src/typings/**/*.d.ts", "src/**/*", "src/**/*.vue"],
+  "exclude": ["/dist/**", "node_modules"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "allowJs": true,
+    "paths": {
+      "@/*": ["./src/*"],
+      "~/*": ["./*"]
+    },
+    "types": ["node"]
+  }
 }
