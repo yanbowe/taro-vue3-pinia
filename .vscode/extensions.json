@@ -4,7 +4,6 @@
 		"formulahendry.auto-complete-tag",
 		"steoates.autoimport",
 		"formulahendry.auto-rename-tag",
-		"coenraads.bracket-pair-colorizer-2",
 		"naumovs.color-highlight",
 		"pranaygp.vscode-css-peek",
 		"mikestead.dotenv",
@@ -24,12 +23,11 @@
 		"yzhang.markdown-all-in-one",
 		"pkief.material-icon-theme",
 		"zhuangtongfa.material-theme",
-		"jimdong.naive-ui-snippets",
 		"christian-kohler.path-intellisense",
 		"esbenp.prettier-vscode",
 		"vue.volar",
 		"vue.vscode-typescript-vue-plugin",
 		"dariofuzinato.vue-peek",
-		"antfu.unocss"
+		"voorjaar.windicss-intellisense"
 	]
 }
