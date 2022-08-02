@@ -1,26 +1,21 @@
-module.exports = {
-  prefixer: false,
-  separator: '_',
-  compile: false,
-  globalUtility: false,
-  darkMode: 'class',
-  corePlugins: {
-    preflight: false,
-    divideColor: false,
-    divideOpacity: false,
-    divideStyle: false,
-    divideWidth: false,
-    space: false,
-    placeholderColor: false,
-    placeholderOpacity: false
-  },
+import presetWeapp from 'unocss-preset-weapp';
+
+export default {
+  exclude: ['node_modules', '.git', '.husky', '.vscode', 'dist', 'public', 'build', 'mock', './stats.html'],
+  presets: [
+    presetWeapp({
+      // h5兼容
+      isH5: process.env.TARO_ENV === 'h5',
+      platform: 'taro',
+      designWidth: 375
+    })
+  ],
   shortcuts: {
     'wh-full': 'w-full h-full',
     'flex-center': 'flex justify-center items-center',
     'flex-col-center': 'flex-center flex-col',
     'flex-x-center': 'flex justify-center',
     'flex-y-center': 'flex items-center',
-    'flex-x-between': 'flex justify-between',
     'i-flex-center': 'inline-flex justify-center items-center',
     'i-flex-x-center': 'inline-flex justify-center',
     'i-flex-y-center': 'inline-flex items-center',
@@ -48,38 +43,12 @@ module.exports = {
     'fixed-br': 'fixed-rb',
     'fixed-center': 'fixed left-0 top-0 flex-center wh-full',
     'nowrap-hidden': 'whitespace-nowrap overflow-hidden',
-    'ellipsis-text': 'nowrap-hidden overflow-ellipsis',
-    'transition-base': 'transition-all duration-300 ease-in-out',
-    'init-loading-spin': 'w-16px h-16px bg-primary rounded-8px animate-pulse'
+    'ellipsis-text': 'nowrap-hidden text-ellipsis',
+    'transition-base': 'transition-all duration-300 ease-in-out'
   },
   theme: {
-    extend: {
-      colors: {
-        primary: '#1890ff',
-        green: 'var(--green-color)',
-        orange: 'var(--orange-color)',
-        red: 'var(--red-color)',
-        light: '#ffffff',
-        dark: '#000'
-      },
-      backgroundColor: {
-        dark: '#000',
-        'dark-base': '#101014'
-      },
-      textColor: {
-        'black-base': '#333639',
-        'white-base': '#fff'
-      },
-      transitionProperty: [
-        'width',
-        'height',
-        'background',
-        'background-color',
-        'padding-left',
-        'border-color',
-        'right',
-        'fill'
-      ]
+    colors: {
+      primary: '#1890ff'
     }
   }
 };

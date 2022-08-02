@@ -1,3 +1,9 @@
+// 导入unocss
+// eslint-disable-next-line import/no-import-module-exports
+import UnoCSS from 'unocss/webpack';
+// eslint-disable-next-line import/no-import-module-exports, import/order
+import transformWeClass from 'unplugin-transform-we-class/webpack';
+
 const path = require('path');
 
 const args = process.argv;
@@ -20,8 +26,8 @@ const config = {
   sourceRoot: 'src',
   outputRoot: 'dist',
   plugins: isOpenDevTools
-    ? ['@tarojs/plugin-html', '@tarojs/plugin-vue-devtools', 'taro-plugin-pinia', 'taro-plugin-tailwind']
-    : ['@tarojs/plugin-html', 'taro-plugin-pinia', 'taro-plugin-tailwind'],
+    ? ['@tarojs/plugin-html', '@tarojs/plugin-vue-devtools', 'taro-plugin-pinia']
+    : ['@tarojs/plugin-html', 'taro-plugin-pinia'],
   sass: {
     resource: [path.resolve(__dirname, '..', 'src/styles/custom.scss')],
     data: `@import "@nutui/nutui-taro/dist/styles/variables.scss";`
@@ -60,6 +66,11 @@ const config = {
           generateScopedName: '[name]__[local]___[hash:base64:5]'
         }
       }
+    },
+    // 合并webpack配置
+    webpackChain(chain) {
+      chain.plugin('unocss').use(UnoCSS());
+      chain.plugin('transformWeClass').use(transformWeClass());
     }
   },
   h5: {
@@ -89,6 +100,11 @@ const config = {
           generateScopedName: '[name]__[local]___[hash:base64:5]'
         }
       }
+    },
+    // 合并webpack配置
+    webpackChain(chain) {
+      chain.plugin('unocss').use(UnoCSS());
+      chain.plugin('transformWeClass').use(transformWeClass());
     },
     devServer: {
       proxy: {

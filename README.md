@@ -1,11 +1,11 @@
 
 ## 简介
 
-taro-vue3-pinia 是一个使用 Taro3 + Vue3 + TypeScript + NutUi + pinia + windi.css + pnpm 跨端模板，它使用了最新的前端技术栈，内置丰富的插件，有着极高的代码规范，开箱即用的跨端前端解决方案，也可用于学习参考。
+taro-vue3-pinia 是一个使用 Taro3 + Vue3 + TypeScript + NutUi + pinia + unocss + pnpm 跨端模板，它使用了最新的前端技术栈，内置丰富的插件，有着极高的代码规范，开箱即用的跨端前端解决方案，也可用于学习参考。
 
 ## 特性
 
-- **最新技术栈**：使用 Taro3 + Vue3 + TypeScript + NutUi + pinia + windi.css + pnpm 等前端前沿技术开发
+- **最新技术栈**：使用 Taro3 + Vue3 + TypeScript + NutUi + pinia + unocss + pnpm 等前端前沿技术开发
 - **TypeScript**: 应用程序级 JavaScript 的语言
 - **代码规范**：丰富的规范插件及极高的代码规范
 
@@ -21,7 +21,7 @@ taro-vue3-pinia 是一个使用 Taro3 + Vue3 + TypeScript + NutUi + pinia + wind
 ## 当前实现了的功能
 
 - Taro3 Vue3 Ts pinia
-- windi.css 集成（当前无法使用，插件不支持v3.5.1版本（https://github.com/pcdotfan/taro-plugin-tailwind/issues/121））
+- unocss 集成(https://github.com/MellowCo/unocss-preset-weapp)
 - 组件库 NutUI
 - 小程序分包配置
 - Taro3 配合 Vue DevTools 调试
@@ -85,4 +85,4 @@ page {
 - 小程序端非类似 HTML 表单标签规范的表单组件，如 Picker，暂不兼容 v-model。Vue3 的 v-model 绑定属性改为了 modelValue，事件绑定改为了 update:modelValue。对于 HTML 表单标签会自动对接表单的值与事件，例如 input 会自动对应 modelValue 与 value、update:modelValue 与 @input。但对于 Picker 这种小程序特有表单则无法对应，建议这种情况不使用 v-model。
 - VirtualList 组件需要实现一份 Vue3 版本（待实现）
 - 所有组件的 id 必须在整个应用中保持唯一（即使他们在不同的页面），否则可能导致事件不触发的问题
-- windi.css 限制 不支持text-[#000]写法(可通过text-hex-808080解决)，详情请看- [github](https://github.com/Yill625/taro3-vue3-template)。
+- unocss 限制 不支持text-[#000]写法(可通过text-hex-808080解决)，详情请看- [github](https://github.com/Yill625/taro3-vue3-template)。

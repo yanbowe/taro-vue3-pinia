@@ -1,4 +1,4 @@
-// import 'windi.css';
+import 'uno.css';
 import '../app.scss';
 
 /** 引入静态资源 */

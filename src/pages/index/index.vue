@@ -1,6 +1,6 @@
 <template>
   <nut-cell title="基础弹框" @click="baseClick"></nut-cell>
-  <nut-cell title="分包A1" @click="handleToA"></nut-cell>
+  <nut-cell title="分包A" @click="handleToA"></nut-cell>
   <nut-cell title="分包B" @click="handleToB"></nut-cell>
   <nut-dialog v-model:visible="visible1" title="基础弹框" content="这是基础弹框。" />
 </template>
