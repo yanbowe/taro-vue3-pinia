@@ -16,6 +16,7 @@ const config = {
   alias: {
     '@': path.resolve(__dirname, '..', 'src')
   },
+  compiler: 'webpack5',
   sourceRoot: 'src',
   outputRoot: 'dist',
   plugins: isOpenDevTools

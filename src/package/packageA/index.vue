@@ -1,5 +1,5 @@
 <template>
-  <div class="text-16px">我是packageA</div>
+  <div>我是packageA</div>
 </template>
 <script lang="ts" setup>
 definePageConfig({
