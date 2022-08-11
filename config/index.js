@@ -1,9 +1,6 @@
 // 导入unocss
-// eslint-disable-next-line import/no-import-module-exports
 import UnoCSS from 'unocss/webpack';
-// eslint-disable-next-line import/no-import-module-exports, import/order
 import transformWeClass from 'unplugin-transform-we-class/webpack';
-
 const path = require('path');
 
 const args = process.argv;

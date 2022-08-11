@@ -1,14 +1,6 @@
-*.sh
-node_modules
-lib
-*.md
-*.woff
-*.ttf
 .vscode
 .idea
-/dist/
-/mock/
-/public
-/docs
 .vscode
 .local
+!.env-config.ts
+components.d.ts

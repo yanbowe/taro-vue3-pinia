@@ -12,8 +12,7 @@ definePageConfig({
 
 async function getDemo() {
   const res = await fetchDemo(1);
-  // eslint-disable-next-line no-console
-  console.log(res);
+  window.console.log(res);
 }
 getDemo();
 </script>

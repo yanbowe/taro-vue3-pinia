@@ -1,31 +1,8 @@
 module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
-    'vue/setup-compiler-macros': true
-  },
-  globals: {
-    PROJECT_BUILD_TIME: 'readonly'
-  },
-  parser: 'vue-eslint-parser',
-  parserOptions: {
-    ecmaVersion: 12,
-    parser: '@typescript-eslint/parser',
-    sourceType: 'module'
-  },
-  plugins: ['vue', '@typescript-eslint'],
-  extends: [
-    'airbnb-base',
-    'eslint:recommended',
-    'plugin:vue/vue3-recommended',
-    'plugin:prettier/recommended',
-    '@vue/eslint-config-typescript/recommended',
-    '@vue/eslint-config-prettier',
-    '@vue/typescript/recommended'
-  ],
+  extends: ['@soybeanjs'],
   rules: {
-    'import/extensions': 'off',
-    'import/no-extraneous-dependencies': 'off',
+    'import/no-unresolved': ['error', { ignore: ['uno.css', '~icons/*', 'virtual:svg-icons-register'] }],
+    'no-return-await': 'off',
     'import/order': [
       'error',
       {
@@ -38,7 +15,7 @@ module.exports = {
             position: 'before'
           },
           {
-            pattern: '@tarojs/taro',
+            pattern: 'vue-router',
             group: 'external',
             position: 'before'
           },
@@ -48,8 +25,18 @@ module.exports = {
             position: 'before'
           },
           {
-            pattern: '@nutui/nutui-taro',
+            pattern: 'naive-ui',
             group: 'external',
+            position: 'before'
+          },
+          {
+            pattern: '@/config',
+            group: 'internal',
+            position: 'before'
+          },
+          {
+            pattern: '@/settings',
+            group: 'internal',
             position: 'before'
           },
           {
@@ -63,17 +50,37 @@ module.exports = {
             position: 'before'
           },
           {
-            pattern: '@/pages',
+            pattern: '@/layouts',
             group: 'internal',
             position: 'before'
           },
           {
-            pattern: '@/package',
+            pattern: '@/views',
+            group: 'internal',
+            position: 'before'
+          },
+          {
+            pattern: '@/components',
+            group: 'internal',
+            position: 'before'
+          },
+          {
+            pattern: '@/router',
+            group: 'internal',
+            position: 'before'
+          },
+          {
+            pattern: '@/service',
             group: 'internal',
             position: 'before'
           },
           {
             pattern: '@/store',
+            group: 'internal',
+            position: 'before'
+          },
+          {
+            pattern: '@/context',
             group: 'internal',
             position: 'before'
           },
@@ -88,11 +95,6 @@ module.exports = {
             position: 'before'
           },
           {
-            pattern: '@/service',
-            group: 'internal',
-            position: 'before'
-          },
-          {
             pattern: '@/utils',
             group: 'internal',
             position: 'before'
@@ -103,77 +105,13 @@ module.exports = {
             position: 'before'
           },
           {
-            pattern: '@/interface',
+            pattern: '@/**',
             group: 'internal',
             position: 'before'
           }
         ],
-        pathGroupsExcludedImportTypes: ['vue', '@tarojs/taro', 'pinia', '@nutui/nutui-taro']
+        pathGroupsExcludedImportTypes: ['vue', 'vue-router', 'pinia', 'naive-ui']
       }
-    ],
-    'import/no-unresolved': 'off',
-    'import/prefer-default-export': 'off',
-    'max-classes-per-file': 'off',
-    'no-param-reassign': [
-      'error',
-      {
-        props: true,
-        ignorePropertyModificationsFor: ['state', 'acc', 'e']
-      }
-    ],
-    'no-plusplus': 'off',
-    'no-shadow': 'off',
-    'no-unused-vars': 'off',
-    'no-use-before-define': 'off',
-    'vue/multi-word-component-names': [
-      'error',
-      {
-        ignores: ['index']
-      }
-    ],
-
-    '@typescript-eslint/ban-types': [
-      'error',
-      {
-        types: {
-          '{}': {
-            message: 'Use object instead',
-            fixWith: 'object'
-          }
-        }
-      }
-    ],
-    '@typescript-eslint/no-empty-interface': [
-      'error',
-      {
-        allowSingleExtends: true
-      }
-    ],
-    'global-require': 'off',
-    'no-return-await': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
-    '@typescript-eslint/no-shadow': 'error',
-    '@typescript-eslint/no-unused-vars': ['warn', { ignoreRestSiblings: true, varsIgnorePattern: '^_' }],
-    '@typescript-eslint/no-use-before-define': ['error', { classes: true, functions: false, typedefs: false }]
-  },
-  overrides: [
-    {
-      files: ['*.vue'],
-      rules: {
-        'no-undef': 'off'
-      }
-    },
-    {
-      files: ['*.html'],
-      rules: {
-        'vue/comment-directive': 'off'
-      }
-    },
-    {
-      files: ['*.json'],
-      rules: {
-        'no-unused-expressions': 'off'
-      }
-    }
-  ]
+    ]
+  }
 };
