@@ -15,7 +15,7 @@ module.exports = {
             position: 'before'
           },
           {
-            pattern: 'vue-router',
+            pattern: '@tarojs/taro',
             group: 'external',
             position: 'before'
           },
@@ -25,7 +25,7 @@ module.exports = {
             position: 'before'
           },
           {
-            pattern: 'naive-ui',
+            pattern: '@nutui/nutui-taro',
             group: 'external',
             position: 'before'
           },
@@ -50,7 +50,7 @@ module.exports = {
             position: 'before'
           },
           {
-            pattern: '@/layouts',
+            pattern: '@/pages',
             group: 'internal',
             position: 'before'
           },
@@ -65,7 +65,7 @@ module.exports = {
             position: 'before'
           },
           {
-            pattern: '@/router',
+            pattern: '@/package',
             group: 'internal',
             position: 'before'
           },
@@ -110,7 +110,7 @@ module.exports = {
             position: 'before'
           }
         ],
-        pathGroupsExcludedImportTypes: ['vue', 'vue-router', 'pinia', 'naive-ui']
+        pathGroupsExcludedImportTypes: ['vue', 'vue-router', 'pinia', '@nutui/nutui-taro']
       }
     ]
   }
