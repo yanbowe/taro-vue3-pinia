@@ -73,6 +73,7 @@ const config = {
   h5: {
     publicPath: '/',
     staticDirectory: 'static',
+    esnextModules: ['nutui-taro'],
     postcss: {
       pxtransform: {
         enable: true,
