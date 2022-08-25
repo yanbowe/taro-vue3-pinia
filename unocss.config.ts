@@ -7,7 +7,14 @@ export default {
       // h5兼容
       isH5: process.env.TARO_ENV === 'h5',
       platform: 'taro',
-      designWidth: 375
+      designWidth: 375,
+      deviceRatio: {
+        640: 2.34 / 2,
+        750: 1,
+        828: 1.81 / 2,
+        375: 2 / 1
+      },
+      taroWebpack: 'webpack5'
     })
   ],
   shortcuts: {
