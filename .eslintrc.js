@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['@yanbowen/eslint-config-vue'],
+  extends: ['soybeanjs-vue'],
   rules: {
     'import/no-unresolved': ['error', { ignore: ['uno.css', '~icons/*', 'virtual:svg-icons-register'] }],
     'no-return-await': 'off',

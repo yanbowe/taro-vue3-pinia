@@ -5,6 +5,7 @@ import type { Method, Config } from '@/interface';
 
 const env = getEnv();
 
+// eslint-disable-next-line max-params
 async function axios<T = any>(
   url: string,
   method: Method,

@@ -48,7 +48,6 @@ export default {
     }
   ]
 }
-
 ```
 
 ## 主题定制
@@ -66,11 +65,3 @@ export default {
 ### 其他限制
 
 - 小程序中不支持 `<style scoped>`，建议使用 cssModules 代替。
-
-### 捐赠
-
-Taro3-Vue3-Pinia 是完全开源免费的项目，在帮助开发者更方便地进行跨端开发，如果这个项目帮助到了您，可以考虑请作者喝杯咖啡！
-
-![WechatIMG33](https://user-images.githubusercontent.com/43030980/183560352-dc95c4f1-e24e-4034-b9ef-8fa71d4e049e.jpeg)
-
-![WechatIMG34](https://user-images.githubusercontent.com/43030980/183560362-7947feac-1eae-4df8-9fbd-f5ef0651cca2.jpeg)
