@@ -1,6 +1,5 @@
 // 导入unocss
 import UnoCSS from 'unocss/webpack';
-import transformWeClass from 'unplugin-transform-we-class/webpack';
 const path = require('path');
 
 const args = process.argv;
@@ -67,7 +66,6 @@ const config = {
     // 合并webpack配置
     webpackChain(chain) {
       chain.plugin('unocss').use(UnoCSS());
-      chain.plugin('transformWeClass').use(transformWeClass());
     }
   },
   h5: {
@@ -102,7 +100,6 @@ const config = {
     // 合并webpack配置
     webpackChain(chain) {
       chain.plugin('unocss').use(UnoCSS());
-      chain.plugin('transformWeClass').use(transformWeClass());
     },
     devServer: {
       proxy: {

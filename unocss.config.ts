@@ -1,6 +1,8 @@
+import { defineConfig } from 'unocss';
 import presetWeapp from 'unocss-preset-weapp';
+import { transformerClass } from 'unocss-preset-weapp/transformer';
 
-export default {
+export default defineConfig({
   exclude: ['node_modules', '.git', '.husky', '.vscode', 'dist', 'public', 'build', 'mock', './stats.html'],
   presets: [
     presetWeapp({
@@ -57,5 +59,9 @@ export default {
     colors: {
       primary: '#1890ff'
     }
-  }
-};
+  },
+  transformers: [
+    // options 见https://github.com/MellowCo/unplugin-transform-class
+    transformerClass()
+  ]
+});
