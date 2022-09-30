@@ -61,7 +61,7 @@ export default defineConfig({
     }
   },
   transformers: [
-    // options 见https://github.com/MellowCo/unplugin-transform-class
+    // options https://github.com/MellowCo/unocss-preset-weapp/tree/main/src/transformer/transformerClass
     transformerClass()
   ]
 });
