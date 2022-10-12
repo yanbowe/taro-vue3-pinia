@@ -4328,7 +4328,7 @@ packages:
       babel-plugin-transform-react-jsx-to-rn-stylesheet: 3.5.6
       babel-plugin-transform-taroapi: 3.5.6
       core-js: 3.24.1
-      metro-react-native-babel-preset: 0.70.3_@babel+core@7.19.3
+      metro-react-native-babel-preset: 0.70.3
     transitivePeerDependencies:
       - '@types/react'
       - '@types/webpack'
@@ -5303,8 +5303,8 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
-      JSONStream: 1.3.5
       is-text-path: 1.0.1
+      JSONStream: 1.3.5
       lodash: 4.17.21
       meow: 8.1.2
       split2: 3.2.2
@@ -10135,10 +10135,8 @@ packages:
     resolution: {integrity: sha512-iclAHeNqNm68zFtnZ0e+1L2yUIdvzNoauKU4WBA3VvH/vPFieF7qfRlwUZU+DA9P9bPXIS90ulxoUoCH23sV2w==}
     engines: {node: '>= 0.6'}
 
-  /metro-react-native-babel-preset/0.70.3_@babel+core@7.19.3:
+  /metro-react-native-babel-preset/0.70.3:
     resolution: {integrity: sha512-4Nxc1zEiHEu+GTdEMEsHnRgfaBkg8f/Td3+FcQ8NTSvs+xL3LBrQy6N07idWSQZHIdGFf+tTHvRfSIWLD8u8Tg==}
-    peerDependencies:
-      '@babel/core': '*'
     dependencies:
       '@babel/core': 7.19.3
       '@babel/plugin-proposal-async-generator-functions': 7.18.10_@babel+core@7.19.3

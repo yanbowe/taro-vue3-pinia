@@ -10,7 +10,7 @@ export default defineAppConfig({
   subPackages: [
     {
       root: 'package',
-      pages: ['packageA/index', 'packageB/index']
+      pages: ['packageA/index', 'packageB/index', 'packageC/index']
     }
   ]
 });
