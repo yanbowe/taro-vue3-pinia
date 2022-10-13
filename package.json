@@ -27,7 +27,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@babel/runtime": "^7.19.0",
+    "@babel/runtime": "^7.19.4",
     "@nutui/nutui-taro": "^3.2.3",
     "@tarojs/cli": "^3.5.6",
     "@tarojs/components": "^3.5.6",
@@ -58,7 +58,7 @@
     "@tarojs/plugin-framework-vue3": "^3.5.6",
     "@tarojs/plugin-vue-devtools": "^3.5.6",
     "@types/lodash-es": "^4.17.6",
-    "@types/node": "^18.8.3",
+    "@types/node": "18.8.3",
     "@types/qs": "^6.9.7",
     "@types/webpack-env": "^1.18.0",
     "@unocss/webpack": "^0.45.29",
@@ -78,7 +78,7 @@
     "unocss": "^0.45.29",
     "unocss-preset-weapp": "^0.1.18",
     "vue-loader": "^17.0.0",
-    "vue-tsc": "^1.0.3",
+    "vue-tsc": "^1.0.6",
     "webpack": "^5.74.0"
   },
   "lint-staged": {
