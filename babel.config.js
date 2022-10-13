@@ -30,7 +30,6 @@ module.exports = {
         camel2DashComponentName: false
       },
       'nutui3-taro'
-    ],
-    '@vue/babel-plugin-jsx'
+    ]
   ]
 };
