@@ -11,7 +11,7 @@ definePageConfig({
 });
 
 async function getDemo() {
-  const res = await fetchDemo(1);
+  const res = await fetchDemo({ phone: 1 });
   window.console.log(res);
 }
 getDemo();

@@ -1,5 +1,21 @@
 /** 请求的相关类型 */
 declare namespace Service {
+  type RequestMethod = 'GET' | 'POST' | 'PUT' | 'DELETE';
+
+  interface AxiosConfig {
+    /** 请求类型 */
+    contentType?: string;
+    /** 是否显示Toast */
+    useErrMsg?: boolean;
+  }
+
+  interface RequestParam {
+    url: string;
+    method?: Service.RequestMethod;
+    data?: any;
+    axiosConfig?: Service.AxiosConfig;
+  }
+
   /** 请求错误 */
   interface RequestError {
     /** 错误码 */
