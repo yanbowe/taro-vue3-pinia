@@ -1,6 +1,7 @@
-import { defineConfig } from 'unocss';
+import { defineConfig, presetIcons } from 'unocss';
 import presetWeapp from 'unocss-preset-weapp';
 import { transformerClass } from 'unocss-preset-weapp/transformer';
+import { FileSystemIconLoader } from '@iconify/utils/lib/loader/node-loaders';
 
 export default defineConfig({
   exclude: ['node_modules', '.git', '.husky', '.vscode', 'dist', 'public', 'build', 'mock', './stats.html'],
@@ -17,6 +18,16 @@ export default defineConfig({
         375: 2 / 1
       },
       taroWebpack: 'webpack5'
+    }),
+    presetIcons({
+      scale: 1,
+      warn: true,
+      extraProperties: {
+        display: 'inline-block'
+      },
+      collections: {
+        custom: FileSystemIconLoader('./src/assets/svg')
+      }
     })
   ],
   shortcuts: {

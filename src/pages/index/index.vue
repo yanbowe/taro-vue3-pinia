@@ -3,6 +3,7 @@
   <nut-cell title="分包A" @click="handleToA"></nut-cell>
   <nut-cell title="分包B" @click="handleToB"></nut-cell>
   <nut-cell title="TSX写法" @click="handleToC"></nut-cell>
+  <nut-cell title="Icon" @click="handleToIcon"></nut-cell>
   <nut-dialog v-model:visible="visible1" title="基础弹框" content="这是基础弹框。" />
 </template>
 
@@ -31,6 +32,12 @@ function handleToB() {
 function handleToC() {
   navigateTo({
     url: '/package/packageC/index'
+  });
+}
+
+function handleToIcon() {
+  navigateTo({
+    url: '/package/icon/index'
   });
 }
 

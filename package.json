@@ -55,6 +55,8 @@
     "@babel/core": "^7.19.6",
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
+    "@iconify/json": "^2.1.131",
+    "@iconify/utils": "^2.0.1",
     "@tarojs/plugin-framework-vue3": "^3.5.7",
     "@tarojs/plugin-vue-devtools": "^3.5.7",
     "@types/lodash-es": "^4.17.6",
