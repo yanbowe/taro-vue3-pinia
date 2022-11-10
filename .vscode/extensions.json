@@ -19,6 +19,7 @@
     "pkief.material-icon-theme",
     "steoates.autoimport",
     "vue.volar",
+    "vue.vscode-typescript-vue-plugin",
     "whtouche.vscode-js-console-utils",
     "zhuangtongfa.material-theme"
   ]

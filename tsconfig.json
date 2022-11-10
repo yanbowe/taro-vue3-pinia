@@ -1,14 +1,23 @@
 {
-  "extends": "@vue/tsconfig/tsconfig.web.json",
-  "include": ["src/typings/*.d.ts", "src/typings/**/*.d.ts", "src/**/*", "src/**/*.vue"],
-  "exclude": ["/dist/**", "node_modules"],
   "compilerOptions": {
     "baseUrl": ".",
-    "allowJs": true,
+    "module": "ESNext",
+    "target": "ESNext",
+    "lib": ["DOM", "ESNext"],
+    "strict": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "preserve",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "noUnusedLocals": true,
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
     "paths": {
-      "@/*": ["./src/*"],
-      "~/*": ["./*"]
+      "~/*": ["./*"],
+      "@/*": ["./src/*"]
     },
     "types": ["node"]
-  }
+  },
+  "exclude": ["node_modules", "dist"]
 }

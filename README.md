@@ -15,7 +15,9 @@ taro-vue3-pinia 是一个使用 Taro3 + Vue3 + TypeScript + NutUi + pinia + unoc
 
 ## Vscode 插件安装
 
-根据项目.vscode 提示安装所需插件
+- 根据项目.vscode 提示安装所需插件
+- 建议开启 Volar [Takeover](https://cn.vuejs.org/guide/typescript/overview.html#volar-takeover-mode) 模式
+- 请使用 pnpm cz 代替 git commit
 
 ## 当前实现了的功能
 
