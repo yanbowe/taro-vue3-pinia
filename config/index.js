@@ -20,7 +20,7 @@ const config = {
   },
   compiler: 'webpack5',
   sourceRoot: 'src',
-  outputRoot: 'dist',
+  outputRoot: `dist/${process.env.TARO_ENV}`,
   plugins: isOpenDevTools
     ? ['@tarojs/plugin-html', '@tarojs/plugin-vue-devtools', 'taro-plugin-pinia']
     : ['@tarojs/plugin-html', 'taro-plugin-pinia'],
