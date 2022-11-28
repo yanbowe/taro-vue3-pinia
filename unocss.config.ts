@@ -26,7 +26,7 @@ export default defineConfig({
         display: 'inline-block'
       },
       collections: {
-        custom: FileSystemIconLoader('./src/assets/svg')
+        local: FileSystemIconLoader('./src/assets/svg')
       }
     })
   ],
