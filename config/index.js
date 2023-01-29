@@ -1,14 +1,33 @@
 // 导入unocss
 import UnoCSS from 'unocss/webpack';
+import ComponentsPlugin from 'unplugin-vue-components/webpack';
 const path = require('path');
 
-const args = process.argv;
-const isOpenDevTools = args.includes('--devtools');
+const NutUIResolver = () => {
+  // eslint-disable-next-line consistent-return
+  return name => {
+    if (name.startsWith('Nut')) {
+      const partialName = name.slice(3);
+      return {
+        name: partialName,
+        from: '@nutui/nutui-taro',
+        sideEffects: `@nutui/nutui-taro/dist/packages/${partialName.toLowerCase()}/style`
+      };
+    }
+  };
+};
 
 const config = {
   projectName: 'Taro3',
   date: '2021-12-18',
-  designWidth: 375,
+  designWidth(input) {
+    // 配置 NutUI 375 尺寸
+    if (input?.file?.replace(/\\+/g, '/').indexOf('@nutui') > -1) {
+      return 375;
+    }
+    // 设计稿尺寸
+    return 375;
+  },
   deviceRatio: {
     640: 2.34 / 2,
     750: 1,
@@ -21,9 +40,7 @@ const config = {
   compiler: 'webpack5',
   sourceRoot: 'src',
   outputRoot: `dist/${process.env.TARO_ENV}`,
-  plugins: isOpenDevTools
-    ? ['@tarojs/plugin-html', '@tarojs/plugin-vue-devtools', 'taro-plugin-pinia']
-    : ['@tarojs/plugin-html', 'taro-plugin-pinia'],
+  plugins: ['@tarojs/plugin-html', 'taro-plugin-pinia'],
   sass: {
     resource: [path.resolve(__dirname, '..', 'src/styles/custom.scss')],
     data: `@import "@nutui/nutui-taro/dist/styles/variables.scss";`
@@ -38,13 +55,7 @@ const config = {
     postcss: {
       pxtransform: {
         enable: true,
-        config: {
-          /** 如果设计稿为750时 */
-          // designWidth(input) {
-          //   const isNutUi = input.file.replace(/\\+/g, '/').indexOf('@nutui/nutui-taro') > -1;
-          //   return isNutUi ? 375 : 750;
-          // },
-        }
+        config: {}
       },
       url: {
         enable: true,
@@ -66,6 +77,12 @@ const config = {
     // 合并webpack配置
     webpackChain(chain) {
       chain.plugin('unocss').use(UnoCSS());
+      chain.plugin('unplugin-vue-components').use(
+        ComponentsPlugin({
+          dts: 'src/typings/components.d.ts',
+          resolvers: [NutUIResolver()]
+        })
+      );
     }
   },
   h5: {
@@ -75,13 +92,7 @@ const config = {
     postcss: {
       pxtransform: {
         enable: true,
-        config: {
-          /** 如果设计稿为750时 */
-          // designWidth(input) {
-          //   const isNutUi = input.file.replace(/\\+/g, '/').indexOf('@nutui/nutui-taro') > -1;
-          //   return isNutUi ? 375 : 750;
-          // },
-        }
+        config: {}
       },
       autoprefixer: {
         enable: true,
@@ -100,6 +111,12 @@ const config = {
     // 合并webpack配置
     webpackChain(chain) {
       chain.plugin('unocss').use(UnoCSS());
+      chain.plugin('unplugin-vue-components').use(
+        ComponentsPlugin({
+          dts: 'src/typings/components.d.ts',
+          resolvers: [NutUIResolver()]
+        })
+      );
     },
     devServer: {
       proxy: {

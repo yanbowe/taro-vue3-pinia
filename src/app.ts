@@ -1,6 +1,6 @@
 import { createApp } from 'vue';
 import { setupStore } from './store';
-import { setupAssets, setupNutui } from './plugins';
+import { setupAssets } from './plugins';
 
 const App = createApp({
   onShow() {
@@ -13,14 +13,9 @@ function setupApp() {
   /** 引入静态资源 */
   setupAssets();
 
-  /** 注册常用nutui组件 */
-  setupNutui(App);
-
   /** 挂载store */
   setupStore(App);
 
-  /** 订阅主题 */
-  // subscribeTheme();
 }
 
 setupApp();

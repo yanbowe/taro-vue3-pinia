@@ -6,6 +6,6 @@ export default defineComponent({
     definePageConfig({
       navigationBarTitleText: 'tsx写法'
     });
-    return () => <div class="text-red-400">支持tsx写法</div>;
+    return () => <div class="text-red-400 text-14px">支持tsx写法</div>;
   }
 });
