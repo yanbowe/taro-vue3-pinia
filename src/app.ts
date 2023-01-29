@@ -15,7 +15,6 @@ function setupApp() {
 
   /** 挂载store */
   setupStore(App);
-
 }
 
 setupApp();

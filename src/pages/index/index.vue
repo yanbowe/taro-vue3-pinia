@@ -6,7 +6,6 @@
     <nut-cell title="TSX写法" @click="handleToC"></nut-cell>
     <nut-cell title="Icon" @click="handleToIcon"></nut-cell>
     <nut-dialog v-model:visible="visible1" title="基础弹框" content="这是基础弹框。" />
-    <nut-button type="primary">主要按钮</nut-button>
   </div>
 </template>
 
