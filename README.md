@@ -27,6 +27,7 @@ taro-vue3-pinia 是一个使用 Taro3 + Vue3 + TypeScript + NutUi + pinia + unoc
 - 小程序分包配置
 - Taro3 配合 Vue DevTools 调试
 - 样式封装 1px 问题 底部安全区域适配
+- 暗黑模式 & 主题定制
 
 ## 小程序分包配置
 
@@ -54,7 +55,7 @@ export default {
 
 ## 主题定制
 
-- 使用 unocss 完善主题定制，只在 h5 有效，小程序无法对 page 动态设置 style，暂无解决方案
+- 使用 unocss 完善主题定制，需在每个页面引入<basic-layout></basic-layout>作为根组件， 实现方案[ConfigProvider](https://nutui.jd.com/taro/vue/4x/#/zh-CN/component/configprovider)
 
 ### 小程序配置细节
 

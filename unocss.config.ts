@@ -18,7 +18,7 @@ export default defineConfig({
         375: 2 / 1
       },
       taroWebpack: 'webpack5'
-    }) as any,
+    }),
     presetIcons({
       scale: 1,
       warn: true,
@@ -68,11 +68,11 @@ export default defineConfig({
   },
   theme: {
     colors: {
-      primary: '#1890ff'
+      primary: 'var(--nut-primary-color)'
     }
   },
   transformers: [
     // options https://github.com/MellowCo/unocss-preset-weapp/tree/main/src/transformer/transformerClass
-    transformerClass() as any
+    transformerClass()
   ]
 });

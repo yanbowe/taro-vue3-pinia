@@ -1,5 +1,5 @@
 <template>
-  <div class="p-15px">
+  <basic-layout class="p-15px">
     <div class="pb-12px text-16px">通过class渲染(https://icones.js.org/)</div>
     <div class="mr-15px text-30px i-ph-anchor-simple-thin" />
     <div class="mr-15px text-30px i-mdi-alarm text-orange-400" />
@@ -11,7 +11,7 @@
     </div>
     <div class="i-local-wind text-40px text-primary" />
     <div class="i-local-custom-icon text-40px text-primary" />
-  </div>
+  </basic-layout>
 </template>
 <script lang="ts" setup>
 definePageConfig({

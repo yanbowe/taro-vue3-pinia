@@ -1,4 +1,5 @@
 import { defineComponent } from 'vue';
+import BasicLayout from '@/components/BasicLayout/index.vue';
 
 export default defineComponent({
   name: 'PackageC',
@@ -6,6 +7,10 @@ export default defineComponent({
     definePageConfig({
       navigationBarTitleText: 'tsx写法'
     });
-    return () => <div class="text-red-400 text-14px">支持tsx写法</div>;
+    return () => (
+      <BasicLayout>
+        <div class="text-red-400 text-14px">支持tsx写法</div>
+      </BasicLayout>
+    );
   }
 });

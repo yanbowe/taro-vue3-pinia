@@ -1,5 +1,7 @@
 <template>
-  <div>我是packageB</div>
+  <basic-layout>
+    <div>我是packageB</div>
+  </basic-layout>
 </template>
 <script lang="ts" setup>
 import { fetchDemo } from '@/service';

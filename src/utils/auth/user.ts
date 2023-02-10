@@ -36,8 +36,7 @@ export function getUserInfo() {
   const emptyInfo: Auth.UserInfo = {
     userId: '',
     userName: '',
-    userPhone: '',
-    userRole: 'visitor'
+    userPhone: ''
   };
   const userInfo: Auth.UserInfo = getLocal<Auth.UserInfo>(EnumStorageKey['user-info']) || emptyInfo;
   return userInfo;

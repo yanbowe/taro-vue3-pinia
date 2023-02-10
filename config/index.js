@@ -42,7 +42,6 @@ const config = {
   outputRoot: `dist/${process.env.TARO_ENV}`,
   plugins: ['@tarojs/plugin-html', 'taro-plugin-pinia'],
   sass: {
-    resource: [path.resolve(__dirname, '..', 'src/styles/custom.scss')],
     data: `@import "@nutui/nutui-taro/dist/styles/variables.scss";`
   },
   defineConstants: {},
