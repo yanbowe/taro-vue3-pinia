@@ -36,20 +36,20 @@ taro-vue3-pinia 是一个使用 Taro3 + Vue3 + TypeScript + NutUi + pinia + unoc
 ```js
 // app.config.ts
 export default {
-  pages: ['pages/index/index'],
-  window: {
-    backgroundColor: '#fff',
-    backgroundTextStyle: 'light',
-    navigationBarBackgroundColor: '#fff',
-    navigationBarTitleText: 'Taro3',
-    navigationBarTextStyle: 'black'
-  },
-  subpackages: [
-    {
-      root: 'pages/packageA',
-      pages: ['index/index']
-    }
-  ]
+	pages: ["pages/index/index"],
+	window: {
+		backgroundColor: "#fff",
+		backgroundTextStyle: "light",
+		navigationBarBackgroundColor: "#fff",
+		navigationBarTitleText: "Taro3",
+		navigationBarTextStyle: "black",
+	},
+	subpackages: [
+		{
+			root: "pages/packageA",
+			pages: ["index/index"],
+		},
+	],
 };
 ```
 
