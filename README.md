@@ -50,7 +50,7 @@ export default {
       pages: ['index/index']
     }
   ]
-}
+};
 ```
 
 ## 主题定制

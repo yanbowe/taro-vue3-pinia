@@ -1,7 +1,17 @@
 module.exports = {
-  extends: ['soybeanjs-vue'],
+  extends: ['soybeanjs/vue'],
+  overrides: [
+    {
+      files: ['*.vue'],
+      rules: {
+        'no-undef': 'off' // use tsc to check the ts code of the vue
+      }
+    }
+  ],
+  settings: {
+    'import/core-modules': ['uno.css', '~icons/*', 'virtual:svg-icons-register']
+  },
   rules: {
-    'import/no-unresolved': ['error', { ignore: ['uno.css', '~icons/*', 'virtual:svg-icons-register'] }],
     'no-return-await': 'off',
     'import/order': [
       'error',
