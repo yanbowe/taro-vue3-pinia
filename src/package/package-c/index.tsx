@@ -1,5 +1,5 @@
 import { defineComponent } from 'vue';
-import BasicLayout from '@/components/BasicLayout/index.vue';
+import BasicLayout from '@/components/basic-layout/index.vue';
 
 export default defineComponent({
   name: 'PackageC',

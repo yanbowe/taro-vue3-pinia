@@ -1,5 +1,5 @@
 import { computed } from 'vue';
-import useCountDown from './useCountDown';
+import useCountDown from './use-count-down';
 
 export default function useSmsCode() {
   const { counts, start, isCounting } = useCountDown(60);

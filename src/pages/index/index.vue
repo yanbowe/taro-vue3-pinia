@@ -26,19 +26,19 @@ function baseClick() {
 
 function handleToA() {
   navigateTo({
-    url: '/package/packageA/index'
+    url: '/package/package-a/index'
   });
 }
 
 function handleToB() {
   navigateTo({
-    url: '/package/packageB/index'
+    url: '/package/package-b/index'
   });
 }
 
 function handleToC() {
   navigateTo({
-    url: '/package/packageC/index'
+    url: '/package/package-c/index'
   });
 }
 
