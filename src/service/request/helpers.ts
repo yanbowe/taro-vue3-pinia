@@ -1,6 +1,6 @@
-import { getEnv } from '@tarojs/taro';
+import { getEnv, getAccountInfoSync } from '@tarojs/taro';
 import { ContentTypeEnum } from '@/enum';
-import { getToken } from '@/utils';
+import { getToken, exeStrategyActions } from '@/utils';
 
 const env = getEnv();
 
@@ -9,12 +9,29 @@ const env = getEnv();
  * @param url
  */
 export function getRequestUrl(url: string) {
-  let baseUrl: string;
-  if (env === 'WEB') {
-    baseUrl = `/api${url}`;
-  } else {
-    baseUrl = url.substring(0, 1) === '/' ? `${process.env.HTTP_URL}${url}` : `${url}`;
-  }
+  let baseUrl = '';
+  const actions: Common.StrategyAction[] = [
+    [env === 'WEB', () => (baseUrl = `/api${url}`)],
+    [
+      env === 'WEAPP',
+      () => {
+        const { miniProgram } = getAccountInfoSync();
+        const hosts = {
+          develop: 'https://getman.cn/mock', // 开发
+          trial: 'https://getman.cn/mock', // 体验
+          release: 'https://getman.cn/mock' // 正式
+        };
+        baseUrl = url.substring(0, 1) === '/' ? `${hosts[miniProgram.envVersion]}${url}` : `${url}`;
+      }
+    ],
+    [
+      true,
+      () => {
+        baseUrl = url.substring(0, 1) === '/' ? `${process.env.HTTP_URL}${url}` : `${url}`;
+      }
+    ]
+  ];
+  exeStrategyActions(actions);
   return baseUrl;
 }
 

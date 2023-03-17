@@ -1,5 +1,6 @@
 <template>
-  <basic-layout>
+  <basic-layout tar-bar>
+    <custom-nav-bar title="首页" />
     <nut-cell title="基础弹框" @click="baseClick"></nut-cell>
     <nut-cell title="分包A" @click="handleToA"></nut-cell>
     <nut-cell title="分包B" @click="handleToB"></nut-cell>
@@ -13,7 +14,7 @@
   </basic-layout>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import { ref } from 'vue';
 import { navigateTo } from '@tarojs/taro';
 import { useThemeStore } from '@/store';

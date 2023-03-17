@@ -1,9 +1,10 @@
 <template>
   <basic-layout>
+    <custom-nav-bar title="我是packageB" left-show />
     <div>我是packageB</div>
   </basic-layout>
 </template>
-<script lang="ts" setup>
+<script setup lang="ts">
 import { fetchDemo } from '@/service';
 
 definePageConfig({

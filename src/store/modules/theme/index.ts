@@ -3,7 +3,10 @@ import { defineStore } from 'pinia';
 type ConfigProviderTheme = 'light' | 'dark';
 interface AuthState {
   theme: ConfigProviderTheme;
-  themeVars: object;
+  themeVars: {
+    primaryColor: string;
+    primaryColorEnd: string;
+  };
 }
 
 export const useThemeStore = defineStore('theme-store', {
@@ -16,7 +19,7 @@ export const useThemeStore = defineStore('theme-store', {
   }),
   getters: {
     getTheme: state => state.theme,
-    getThemeVars: state => state.theme
+    getThemeVars: state => state.themeVars
   },
   actions: {
     /** 设置系统主题 */
