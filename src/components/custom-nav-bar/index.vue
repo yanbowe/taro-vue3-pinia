@@ -1,6 +1,9 @@
 <template>
-  <div :style="{ height: `${height}px` }">
+  <div :style="{ height: height }">
     <nut-navbar v-bind="$attrs" fixed safe-area-inset-top class="custom-nav-bar" @on-click-back="navigateBack()">
+      <template #left-show>
+        <div class="i-ph-caret-left-bold text-22px text-#000"></div>
+      </template>
       <template v-for="item in Object.keys($slots)" #[item]="data" :key="item">
         <slot :name="item" v-bind="data || {}"></slot>
       </template>
@@ -10,38 +13,13 @@
 
 <script setup lang="ts">
 import { computed } from 'vue';
-import { navigateBack, getWindowInfo } from '@tarojs/taro';
+import { getEnv, navigateBack, getWindowInfo, pxTransform } from '@tarojs/taro';
 
-const { statusBarHeight = 0 } = getWindowInfo();
+const env = getEnv();
+const windowInfo = getWindowInfo();
+
+const statusBarHeight = env === 'WEB' ? 0 : windowInfo.statusBarHeight || 0;
 /** 安全区高度 + navbar高度 */
-const height = computed(() => statusBarHeight + 44);
+const height = computed(() => pxTransform(statusBarHeight + 44));
 </script>
-<style lang="scss">
-.custom-nav-bar {
-  .nut-navbar__left {
-    padding: 0;
-    .nut-icon-left {
-      color: #000 !important;
-    }
-  }
-  .nut-navbar__title {
-    .title {
-      font-size: 18px;
-      color: #000;
-      font-weight: 500;
-    }
-  }
-}
-.nut-theme-dark {
-  .custom-nav-bar {
-    .nut-icon-left {
-      color: #fff !important;
-    }
-    .nut-navbar__title {
-      .title {
-        color: #fff;
-      }
-    }
-  }
-}
-</style>
+<style lang="scss"></style>

@@ -10,7 +10,6 @@ body {
 	font-size: 16px;
 	font-family: "Helvetica Neue", PingFang-SC-Regular, miui, Helvetica,
 		sans-serif;
-	line-height: 20px;
 	user-select: none;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -48,18 +47,22 @@ page {
 	padding-bottom: constant(safe-area-inset-bottom);
 	padding-bottom: env(safe-area-inset-bottom);
 }
+
 .safe-area-top {
 	padding-top: constant(safe-area-inset-top);
 	padding-top: env(safe-area-inset-top);
 }
+
 .layout-screen {
 	min-height: calc(100vh - constant(safe-area-inset-bottom));
 	min-height: calc(100vh - env(safe-area-inset-bottom));
 }
+
 .layout-tabbar-screen {
 	min-height: calc(100vh - 50px - constant(safe-area-inset-bottom));
 	min-height: calc(100vh - 50px - env(safe-area-inset-bottom));
 }
+
 .layout-tabbar-safe-bottom {
 	padding-bottom: calc(50px + constant(safe-area-inset-bottom));
 	padding-bottom: calc(50px + env(safe-area-inset-bottom));

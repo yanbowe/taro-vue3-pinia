@@ -3,10 +3,7 @@ import { defineStore } from 'pinia';
 type ConfigProviderTheme = 'light' | 'dark';
 interface AuthState {
   theme: ConfigProviderTheme;
-  themeVars: {
-    primaryColor: string;
-    primaryColorEnd: string;
-  };
+  themeVars: object;
 }
 
 export const useThemeStore = defineStore('theme-store', {
@@ -14,7 +11,11 @@ export const useThemeStore = defineStore('theme-store', {
     theme: 'light',
     themeVars: {
       primaryColor: '#e53935',
-      primaryColorEnd: '#e53935'
+      primaryColorEnd: '#e53935',
+      navbarPadding: '0 0',
+      navbarTitleFontColor: '#000',
+      navbarTitleFont: '18px',
+      navbarTitleFontWeight: '500'
     }
   }),
   getters: {
