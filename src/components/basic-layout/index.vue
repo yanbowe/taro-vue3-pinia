@@ -3,10 +3,7 @@
     :theme="theme"
     :theme-vars="themeVars"
     class="overflow-x-hidden"
-    :class="[
-      hasTarBar ? 'layout-tabbar-screen layout-tabbar-safe-bottom' : 'layout-screen safe-area-bottom',
-      theme === 'dark' ? 'bg-#000' : 'bg-#fff'
-    ]"
+    :class="[...providerClass, theme === 'dark' ? 'bg-#000' : 'bg-#fff']"
   >
     <slot />
   </nut-config-provider>
@@ -18,16 +15,24 @@ import { useThemeStore } from '@/store';
 
 interface Props {
   /** 是否有tabbar */
-  tarBar?: boolean;
+  showTabBar?: boolean;
+  /** 是否开启安全区（有tabbar默认开启安全区） */
+  safeAreaInsetBottom?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  tarBar: false
+  showTabBar: false,
+  safeAreaInsetBottom: true
 });
-const hasTarBar = computed(() => props.tarBar);
+const showTabBar = computed(() => props.showTabBar);
 
 const themeStore = useThemeStore();
 const theme = computed(() => themeStore.theme);
 const themeVars = computed(() => themeStore.themeVars);
+
+const providerClass = computed(() => {
+  const safeBottom = props.safeAreaInsetBottom ? 'layout-screen safe-area-bottom' : 'min-h-100vh';
+  return [showTabBar.value ? 'layout-tabbar-screen layout-tabbar-safe-bottom' : safeBottom];
+});
 </script>
 <style scoped></style>
