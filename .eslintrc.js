@@ -40,6 +40,11 @@ module.exports = {
             position: 'before'
           },
           {
+            pattern: '@/constants',
+            group: 'internal',
+            position: 'before'
+          },
+          {
             pattern: '@/config',
             group: 'internal',
             position: 'before'

@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import { getUserInfo, getToken, clearAuthStorage } from '@/utils';
+import { getUserInfo, getToken, clearAuthStorage } from './helpers';
 
 interface AuthState {
   /** 用户信息 */

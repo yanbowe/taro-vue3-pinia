@@ -1,6 +1,6 @@
-import { request, showToast } from '@tarojs/taro';
-import { removeToken } from '@/utils';
-import { getRequestUrl, getRequestHeaders } from './helpers';
+import { request } from '@tarojs/taro';
+import { REQUEST_TIMEOUT, SUCCESS_CODE, REFRESH_TOKEN_CODE } from '@/constants';
+import { getRequestUrl, getRequestHeaders, handleExpireToken, showErrorMsg } from './helpers';
 
 async function axios<T>(config: Service.RequestParam): Promise<Service.RequestResult<T>> {
   const { method, url, data } = config;
@@ -14,33 +14,22 @@ async function axios<T>(config: Service.RequestParam): Promise<Service.RequestRe
       /** 对所有请求添加时间戳以防止缓存 */
       data: { _t: Date.now(), ...data },
       header,
-      timeout: 60000,
+      timeout: REQUEST_TIMEOUT,
       success: res => {
         const { code, message, result } = res.data as Service.BackendResultConfig<T>;
         /* 成功请求 */
-        if (code === 200) {
+        if (code === SUCCESS_CODE) {
           return resolve({
             error: null,
             success: result
           });
         }
-        switch (code) {
-          // 登录态丢失
-          case 1012:
-            removeToken();
-            // return Taro.reLaunch({
-            //   url: '/pages/login/login'
-            // });
-            break;
-          default:
-            // 仅有使用服务端错误信息的请求才 toast 提示错误
-            if (axiosConfig.useErrMsg) {
-              showToast({
-                title: message,
-                icon: 'none',
-                duration: 2000
-              });
-            }
+        if (REFRESH_TOKEN_CODE.includes(code)) {
+          handleExpireToken();
+        }
+        /** 仅有使用服务端错误信息的请求才 toast 提示错误 */
+        if (axiosConfig.useErrMsg) {
+          showErrorMsg(message);
         }
         return resolve({
           error: {
