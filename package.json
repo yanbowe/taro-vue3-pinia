@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.21.0",
-    "@nutui/nutui-taro": "^4.0.3",
+    "@nutui/nutui-taro": "^4.0.4",
     "@tarojs/cli": "3.6.2",
     "@tarojs/components": "3.6.2",
     "@tarojs/helper": "3.6.2",
@@ -55,19 +55,19 @@
   },
   "devDependencies": {
     "@babel/core": "^7.21.3",
-    "@iconify/json": "^2.2.37",
+    "@iconify/json": "^2.2.39",
     "@iconify/utils": "^2.1.5",
     "@tarojs/plugin-framework-vue3": "3.6.2",
     "@types/lodash-es": "^4.17.7",
-    "@types/node": "^18.15.5",
+    "@types/node": "^18.15.10",
     "@types/qs": "^6.9.7",
     "@types/webpack-env": "^1.18.0",
     "@unocss/webpack": "^0.50.6",
     "@vue/babel-plugin-jsx": "^1.1.1",
     "babel-preset-taro": "3.6.2",
-    "commitlint": "^17.4.4",
-    "cz-git": "^1.6.0",
-    "czg": "^1.6.0",
+    "commitlint": "^17.5.0",
+    "cz-git": "^1.6.1",
+    "czg": "^1.6.1",
     "eslint": "^8.36.0",
     "eslint-config-soybeanjs": "^0.3.1",
     "husky": "^8.0.3",
@@ -79,7 +79,7 @@
     "unplugin-vue-components": "^0.24.1",
     "vue-loader": "^17.0.1",
     "vue-tsc": "^1.2.0",
-    "webpack": "^5.76.2"
+    "webpack": "^5.76.3"
   },
   "lint-staged": {
     "*.{js,jsx,mjs,json,ts,tsx,vue}": "eslint . --fix"
