@@ -13,8 +13,8 @@ export const CONTENT_TYPE = {
 /** 请求超时时间 */
 export const REQUEST_TIMEOUT = 60 * 1000;
 
-/** 请求超时时间 */
-export const SUCCESS_CODE = 60 * 1000;
+/** 请求成功状态码 */
+export const SUCCESS_CODE = 200;
 
 /** 错误信息的显示时间 */
 export const ERROR_MSG_DURATION = 3 * 1000;

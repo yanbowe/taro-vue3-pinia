@@ -16,9 +16,9 @@ import { computed } from 'vue';
 import { getEnv, navigateBack, getWindowInfo, pxTransform } from '@tarojs/taro';
 
 const env = getEnv();
-const windowInfo = getWindowInfo();
+const windowInfo = env === 'WEB' ? { statusBarHeight: 0 } : getWindowInfo();
 
-const statusBarHeight = env === 'WEB' ? 0 : windowInfo.statusBarHeight || 0;
+const statusBarHeight = windowInfo.statusBarHeight || 0;
 /** 安全区高度 + navbar高度 */
 const height = computed(() => pxTransform(statusBarHeight + 44));
 </script>
