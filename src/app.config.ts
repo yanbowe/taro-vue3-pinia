@@ -1,5 +1,3 @@
-import { tabBar } from './tar-bar';
-
 export default defineAppConfig({
   pages: ['pages/index/index', 'pages/my/index'],
   window: {
@@ -16,5 +14,19 @@ export default defineAppConfig({
       pages: ['package-a/index', 'package-b/index', 'package-c/index', 'icon/index']
     }
   ],
-  tabBar
+  tabBar: {
+    custom: true,
+    color: '#000000',
+    selectedColor: '#FF0000',
+    list: [
+      {
+        pagePath: 'pages/index/index',
+        text: '首页'
+      },
+      {
+        pagePath: 'pages/my/index',
+        text: '个人中心'
+      }
+    ]
+  }
 });
