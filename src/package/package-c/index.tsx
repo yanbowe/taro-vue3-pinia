@@ -10,7 +10,7 @@ export default defineComponent({
     });
     return () => (
       <BasicLayout>
-        <CustomNavBar title="我是packageB" left-show></CustomNavBar>
+        <CustomNavBar left-show />
         <div class="text-red-400 text-14px">支持tsx写法</div>
       </BasicLayout>
     );
