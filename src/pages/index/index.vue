@@ -8,7 +8,7 @@
     <nut-cell title="Icon" @click="handleToIcon"></nut-cell>
     <nut-dialog v-model:visible="visible1" title="基础弹框" content="这是基础弹框。" />
     <nut-cell>
-      <nut-button type="primary" size="mini" class="!mr-20px" @click="handleTheme">切换主题模式 </nut-button>
+      <nut-button type="primary" size="mini" class="!mr-20px" @click="handleTheme">切换主题模式</nut-button>
       <nut-button type="primary" size="mini" @click="handleThemeColor">切换主题色</nut-button>
     </nut-cell>
   </basic-layout>
