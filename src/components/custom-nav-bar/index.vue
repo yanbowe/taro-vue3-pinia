@@ -1,5 +1,7 @@
 <template>
-  <div class="w-full bg-#fff" :style="{ height: pxTransform(height) }"></div>
+  <div class="w-full fixed bg-#fff" :style="{ height: pxTransform(height) }"></div>
+  <!-- 占位div -->
+  <div :style="{ height: pxTransform(height) }"></div>
   <div :style="{ height: pxTransform(navBarHeight), top: pxTransform(statusBarHeight) }" class="w-full fixed z-99">
     <nut-navbar v-bind="$attrs" class="custom-nav-bar" @on-click-back="navigateBack()">
       <template #left-show>
@@ -24,4 +26,8 @@ const navBarHeight = 44;
 /** 安全区高度 + navbar高度 */
 const height = statusBarHeight + navBarHeight;
 </script>
-<style lang="scss"></style>
+<style lang="scss">
+.custom-nav-bar {
+  box-shadow: 0px 1px 1px rgba(237, 238, 241, 1);
+}
+</style>
