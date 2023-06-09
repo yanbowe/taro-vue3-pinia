@@ -4,7 +4,11 @@ import { transformerClass } from 'unocss-preset-weapp/transformer';
 import { FileSystemIconLoader } from '@iconify/utils/lib/loader/node-loaders';
 
 export default defineConfig({
-  exclude: ['node_modules', '.git', '.husky', '.vscode', 'dist', 'public', 'build', 'mock', './stats.html'],
+  content: {
+    pipeline: {
+      exclude: ['node_modules', 'dist', '.git', '.husky', '.vscode', 'public', 'build', 'mock', './stats.html']
+    }
+  },
   presets: [
     presetWeapp({
       // h5兼容
