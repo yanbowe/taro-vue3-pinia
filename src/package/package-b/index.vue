@@ -1,6 +1,6 @@
 <template>
   <basic-layout>
-    <custom-nav-bar title="我是packageB" left-show />
+    <custom-navbar title="我是packageB" left-show />
     <div>我是packageB</div>
   </basic-layout>
 </template>

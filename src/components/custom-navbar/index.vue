@@ -2,7 +2,7 @@
   <!-- 占位div -->
   <div class="w-full" :style="{ height: pxTransform(height) }"></div>
   <div :style="{ paddingTop: pxTransform(statusBarHeight) }" class="w-full fixed-lt z-10 bg-#fff">
-    <nut-navbar v-bind="$attrs" class="custom-nav-bar" @on-click-back="navigateBack()">
+    <nut-navbar class="custom-navbar" v-bind="$attrs" @on-click-back="navigateBack()">
       <template #left-show>
         <div class="i-ph-caret-left-bold text-22px text-#000"></div>
       </template>
@@ -26,8 +26,10 @@ const navBarHeight = 44;
 const height = statusBarHeight + navBarHeight;
 </script>
 <style lang="scss">
-.custom-nav-bar {
-  box-shadow: 0px 1px 1px rgba(237, 238, 241, 1);
-  margin-bottom: 0;
+.custom-navbar {
+  .nut-navbar {
+    margin-bottom: 0;
+    box-shadow: 0px 1px 1px rgba(237, 238, 241, 1);
+  }
 }
 </style>

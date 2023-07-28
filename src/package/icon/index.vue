@@ -1,6 +1,6 @@
 <template>
   <basic-layout>
-    <custom-nav-bar title="Icon" left-show />
+    <custom-navbar title="Icon" left-show />
     <div class="pb-12px text-16px">通过class渲染(https://icones.js.org/)</div>
     <div class="mr-15px text-30px i-ph-anchor-simple-thin" />
     <div class="mr-15px text-30px i-mdi-alarm text-orange-400" />

@@ -1,6 +1,6 @@
 <template>
   <basic-layout>
-    <custom-nav-bar title="我是packageA" left-show />
+    <custom-navbar title="我是packageA" left-show />
     <div class="w-100px text-20px text-primary ellipsis-text">我是packageA</div>
   </basic-layout>
 </template>

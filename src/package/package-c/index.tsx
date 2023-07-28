@@ -1,6 +1,6 @@
 import { defineComponent } from 'vue';
 import BasicLayout from '@/components/basic-layout/index.vue';
-import CustomNavBar from '@/components/custom-nav-bar/index.vue';
+import CustomNavBar from '@/components/custom-navbar/index.vue';
 
 export default defineComponent({
   name: 'PackageC',
