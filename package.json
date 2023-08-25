@@ -27,7 +27,8 @@
     "commit": "git pull && pnpm format && pnpm lint && git add -A && pnpm cz && git push",
     "pre-commit": "git pull && pnpm lint-staged && pnpm cz && git push",
     "cz": "czg",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "release": "bumpp -r"
   },
   "dependencies": {
     "@babel/runtime": "^7.22.10",
@@ -65,6 +66,7 @@
     "@unocss/webpack": "^0.55.2",
     "@vue/babel-plugin-jsx": "^1.1.5",
     "babel-preset-taro": "3.6.13",
+    "bumpp": "^9.2.0",
     "commitlint": "^17.7.1",
     "czg": "^1.7.1",
     "eslint": "^8.47.0",
