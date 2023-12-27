@@ -1,3 +1,8 @@
+<script setup lang="ts">
+definePageConfig({
+  navigationBarTitleText: 'Icon'
+});
+</script>
 <template>
   <basic-layout>
     <custom-navbar title="Icon" left-show />
@@ -14,10 +19,5 @@
     <div class="i-local-custom-icon text-40px text-primary" />
   </basic-layout>
 </template>
-<script setup lang="ts">
-definePageConfig({
-  navigationBarTitleText: 'Icon'
-});
-</script>
 
 <style lang="scss"></style>

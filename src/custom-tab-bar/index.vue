@@ -1,14 +1,3 @@
-<template>
-  <nut-config-provider :theme="theme" :theme-vars="themeVars">
-    <nut-tabbar :model-value="activeTab" bottom safe-area-inset-bottom @tab-switch="tabSwitch">
-      <nut-tabbar-item v-for="item in tabBar.list" :key="item.pagePath" :name="item.pagePath" :tab-title="item.text">
-        <template #icon>
-          <div class="text-25px" :class="item.icon" />
-        </template>
-      </nut-tabbar-item>
-    </nut-tabbar>
-  </nut-config-provider>
-</template>
 <script setup lang="ts">
 import { computed } from 'vue';
 import { switchTab } from '@tarojs/taro';
@@ -50,5 +39,16 @@ export default {
   }
 };
 </script>
+<template>
+  <nut-config-provider :theme="theme" :theme-vars="themeVars">
+    <nut-tabbar :model-value="activeTab" bottom safe-area-inset-bottom @tab-switch="tabSwitch">
+      <nut-tabbar-item v-for="item in tabBar.list" :key="item.pagePath" :name="item.pagePath" :tab-title="item.text">
+        <template #icon>
+          <div class="text-25px" :class="item.icon" />
+        </template>
+      </nut-tabbar-item>
+    </nut-tabbar>
+  </nut-config-provider>
+</template>
 
 <style lang="scss"></style>

@@ -1,9 +1,3 @@
-<template>
-  <basic-layout>
-    <custom-navbar title="我是packageB" left-show />
-    <div>我是packageB</div>
-  </basic-layout>
-</template>
 <script setup lang="ts">
 import { fetchDemo } from '@/service';
 
@@ -19,5 +13,11 @@ async function getDemo() {
 }
 getDemo();
 </script>
+<template>
+  <basic-layout>
+    <custom-navbar title="我是packageB" left-show />
+    <div>我是packageB</div>
+  </basic-layout>
+</template>
 
 <style lang="scss"></style>

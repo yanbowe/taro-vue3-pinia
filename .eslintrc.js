@@ -12,6 +12,15 @@ module.exports = {
     'import/core-modules': ['uno.css', '~icons/*', 'virtual:svg-icons-register']
   },
   rules: {
+    'vue/block-order': ['warn', { order: ['script', 'template', 'style'] }],
+    'vue/component-api-style': ['warn', ['script-setup', 'composition']],
+    'vue/define-macros-order': [
+      'warn',
+      {
+        order: ['defineOptions', 'defineProps', 'defineEmits', 'defineSlots']
+      }
+    ],
+    'vue/valid-define-options': 'warn',
     'no-return-await': 'off',
     'import/order': [
       'error',

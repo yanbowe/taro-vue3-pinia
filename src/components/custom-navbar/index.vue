@@ -1,3 +1,16 @@
+<script setup lang="ts">
+import { getEnv, navigateBack, getWindowInfo, pxTransform } from '@tarojs/taro';
+
+const env = getEnv();
+const windowInfo = env === 'WEB' ? { statusBarHeight: 0 } : getWindowInfo();
+
+const statusBarHeight = windowInfo.statusBarHeight || 0;
+
+const navBarHeight = 44;
+/** 安全区高度 + navbar高度 */
+const height = statusBarHeight + navBarHeight;
+</script>
+
 <template>
   <!-- 占位div -->
   <div class="w-full" :style="{ height: pxTransform(height) }"></div>
@@ -12,19 +25,6 @@
     </nut-navbar>
   </div>
 </template>
-
-<script setup lang="ts">
-import { getEnv, navigateBack, getWindowInfo, pxTransform } from '@tarojs/taro';
-
-const env = getEnv();
-const windowInfo = env === 'WEB' ? { statusBarHeight: 0 } : getWindowInfo();
-
-const statusBarHeight = windowInfo.statusBarHeight || 0;
-
-const navBarHeight = 44;
-/** 安全区高度 + navbar高度 */
-const height = statusBarHeight + navBarHeight;
-</script>
 <style lang="scss">
 .custom-navbar {
   .nut-navbar {
