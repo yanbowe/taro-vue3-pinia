@@ -21,15 +21,15 @@
     "dev:qq": "npm run build:qq -- --watch",
     "dev:jd": "npm run build:jd -- --watch",
     "dev:quickapp": "npm run build:quickapp -- --watch",
-    "typecheck": "vue-tsc --noEmit --skipLibCheck",
-    "lint": "eslint . --fix",
-    "format": "soy prettier-write",
-    "commit": "git pull && pnpm format && pnpm lint && git add -A && soy git-commit && git push",
-    "cleanup": "soy cleanup",
-    "update-pkg": "soy ncu",
-    "release": "soy release",
     "tsx": "tsx",
-    "prepare": "soy init-simple-git-hooks"
+    "format": "soy prettier --write",
+    "cleanup": "soy cleanup",
+    "commit": "git pull && pnpm format && pnpm lint && git add -A && soy git-commit && git push",
+    "lint": "eslint . --fix",
+    "prepare": "simple-git-hooks",
+    "release": "soy release",
+    "typecheck": "vue-tsc --noEmit --skipLibCheck",
+    "update-pkg": "soy update-pkg"
   },
   "dependencies": {
     "@babel/runtime": "^7.23.6",
